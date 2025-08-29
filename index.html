@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>구글 애드매니저 퍼블리셔 수익화 | 오픈비딩 · SDK 입찰 · AI 검수</title>
+  <meta name="description" content="앱/웹 퍼블리셔를 위한 종합 수익화 솔루션. 구글 애드매니저 무료 구축, 오픈비딩·SDK 입찰, 프리미엄 딜, AI 소재 자동 검수, 정책/브랜드 세이프티 컨설팅." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght @400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased text-gray-900">
+  <!-- Header -->
+  <header class="fixed top-0 inset-x-0 z-50">
+    <div class="glass border-b border-gray-200/60">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between h-16">
+          <a href="#home" class="font-extrabold text-lg tracking-tight">Publisher Monetization</a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="#overview" class="hover:text-indigo-600">수익화 개요</a>
+            <a href="#partnerships" class="hover:text-indigo-600">파트너십</a>
+            <a href="#adserver" class="hover:text-indigo-600">광고 서버</a>
+            <a href="#ai" class="hover:text-indigo-600">AI 검수</a>
+            <a href="#results" class="hover:text-indigo-600">성과</a>
+            <a href="#cases" class="hover:text-indigo-600">사례</a>
+            <a href="#faq" class="hover:text-indigo-600">FAQ</a>
+          </nav>
+          <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-xl bg-indigo-600 px-4 py-2 text-white text-sm font-semibold shadow hover:bg-indigo-700">
+            상담 문의
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </a>
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-gray-300/60 bg-white">
+            <span class="sr-only">메뉴</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden bg-white border-b border-gray-200">
+      <div class="container mx-auto px-4 py-3 space-y-3 text-sm font-medium">
+        <a href="#overview" class="block">수익화 개요</a>
+        <a href="#partnerships" class="block">파트너십</a>
+        <a href="#adserver" class="block">광고 서버</a>
+        <a href="#ai" class="block">AI 검수</a>
+        <a href="#results" class="block">성과</a>
+        <a href="#cases" class="block">사례</a>
+        <a href="#faq" class="block">FAQ</a>
+        <a href="#contact" class="block font-semibold text-indigo-600">상담 문의</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="section pt-28 md:pt-32">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-indigo-700 text-sm font-semibold mb-4">
+            구글 애드매니저 기반 퍼블리셔 수익화
+          </div>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
+            앱/웹 어디서나 손쉬운 <span class="text-indigo-600">광고 수익화</span>
+          </h1>
+          <p class="mt-4 text-gray-600 text-lg">세계 최대 광고 수요(Google)와 해외 최상위 DSP 파트너십을 한 번에 연결합니다. 무료 광고 서버 구축과 국내 최고 전문가의 컨설팅, 브랜드 보호를 위한 AI 광고 소재 자동 검수까지 제공합니다.</p>
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold shadow hover:bg-indigo-700">상담 요청하기</a>
+            <a href="#overview" class="inline-flex items-center justify-center rounded-xl border border-gray-300 px-5 py-3 font-semibold hover:bg-gray-50">데모 리포트 보기</a>
+          </div>
+          <div class="mt-6 flex flex-wrap gap-3 text-sm text-gray-600">
+            <span class="badge bg-gray-100">GCPP · MCM 운영</span>
+            <span class="badge bg-gray-100">GNI 2023–2025 발표</span>
+            <span class="badge bg-gray-100">정책·브랜드 세이프티</span>
+          </div>
+        </div>
+        <div class="relative">
+          <div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-indigo-100 to-rose-100 p-1">
+            <div class="h-full w-full rounded-2xl bg-white grid place-items-center">
+              <div class="text-center p-6">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mx-auto h-16 w-16 text-indigo-600" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 12h18M3 19h18"/></svg>
+                <h3 class="mt-4 text-xl font-bold">반응형 · 지연 로드 · Active View 최적화</h3>
+                <p class="mt-2 text-gray-600">웹/모바일/앱 환경에서 검증된 태그와 SDK 베스트 프랙티스로 구현합니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview -->
+  <section id="overview" class="section py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">손쉬운 앱/웹 서비스 광고 수익화</h2>
+      <p class="mt-3 text-gray-600">개발 리소스는 최소화하고, 수익화는 최대화합니다. GAM 태그/SDK 적용과 데이터 기반 운영을 표준화합니다.</p>
+
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 grid place-items-center rounded-lg bg-indigo-600 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h3.5a1 1 0 01.8.4l1.9 2.4H16a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-lg">웹: 디스플레이·네이티브·아웃스트림</h3>
+          <p class="mt-2 text-gray-600">반응형·지연 로드·클린 레이아웃과 Active View 최적화로 뷰어빌리티와 수익성을 함께 잡습니다.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 grid place-items-center rounded-lg bg-indigo-600 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l3 5 6 .9-4.3 4.2L18 18l-6-3.2L6 18l1.3-6.9L3 6.9 9 6z"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-lg">앱: 리워드·인터스티셜·배너·네이티브</h3>
+          <p class="mt-2 text-gray-600">GAM/AdMob SDK 최적 설정, 초기화/프리로딩 전략, 네트워크 타임아웃 등 실전 노하우 반영.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="h-10 w-10 grid place-items-center rounded-lg bg-indigo-600 text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4zM4 10h16v4H4zM4 16h16v4H4z"/></svg>
+          </div>
+          <h3 class="mt-4 font-bold text-lg">통합 리포팅 & 자동화</h3>
+          <p class="mt-2 text-gray-600">GA4·GAM·미디에이션 지표를 일 1회 자동 수집해 Looker Studio/Sheets 대시보드로 공유합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnerships -->
+  <section id="partnerships" class="section py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">폭넓은 파트너십 (SDK 입찰 · 오픈비딩 · 우선검토)</h2>
+      <p class="mt-3 text-gray-600">더 많은 입찰과 경쟁, 더 나은 단가를 위한 거래 구조를 설계합니다.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold text-lg">SDK Bidding</h3>
+          <p class="mt-2 text-gray-600">앱 환경에 최적화된 실시간 입찰로 워터폴 비효율을 줄이고 매 요청 단가를 끌어올립니다.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold text-lg">Open Bidding</h3>
+          <p class="mt-2 text-gray-600">서버 간 경쟁으로 웹/앱 전반에서 안정적인 단가 상승을 노립니다.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold text-lg">우선검토 / 프리미엄 딜</h3>
+          <p class="mt-2 text-gray-600">타겟·카테고리별 브랜드 딜 패키징으로 안정적 수요와 예산을 확보합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ad Server (Free build) -->
+  <section id="adserver" class="section py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">무료 광고 서버 구축 (디스플레이 · 동영상)</h2>
+      <p class="mt-3 text-gray-600">처음부터 제대로 설계하면, 운영은 훨씬 쉬워집니다.</p>
+      <div class="mt-10 grid md:grid-cols-2 gap-6">
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 인벤토리 체계·네이밍 컨벤션 수립 (웹/모웹/앱·포맷/사이즈/위치)</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 타게팅 키·레이블·빈도/우선순위·Ad Rules 구성</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> VAST/IMA 인스트림·아웃스트림 영상 광고 최적화</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 반응형·지연 로드·CLS 최소화 태그 배포</li>
+          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 무광고 구간 최소화를 위한 하우스/백필 캠페인</li>
+        </ul>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">정책/품질 기본 세팅</h3>
+          <p class="mt-2 text-gray-600">ads.txt · app-ads.txt · sellers.json · CMP/TCF/GPP 연동 · 페이지 속도/뷰어빌리티 균형 설계</p>
+          <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+            <div class="rounded-xl bg-gray-100 p-4">
+              <div class="text-2xl font-extrabold">무료</div>
+              <div class="text-gray-600">초기 구축 비용</div>
+            </div>
+            <div class="rounded-xl bg-gray-100 p-4">
+              <div class="text-2xl font-extrabold">협의</div>
+              <div class="text-gray-600">운영 수수료/레브쉐어</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Creative Review -->
+  <section id="ai" class="section py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">브랜드 보호를 위한 AI 광고 소재 자동 검수</h2>
+      <p class="mt-3 text-gray-600">보기 전에 걸러내는 안전장치. 운영 리소스는 줄이고 정책 리스크는 낮춥니다.</p>
+      <div class="mt-10 grid md:grid-cols-4 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">멀티모달 분석</h3>
+          <p class="mt-2 text-gray-600">이미지 OCR · 영상 프레임 · 오디오 ASR로 성인물·도박·의약품 등 위험 신호 탐지</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">룰 + ML 하이브리드</h3>
+          <p class="mt-2 text-gray-600">블랙/화이트리스트 · 금칙어 · 로고 매칭 + ML 스코어로 오탐/미탐 최소화</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">워크플로우 자동화</h3>
+          <p class="mt-2 text-gray-600">실시간 알림 → 우선순위 큐레이션 → 애드 리뷰 센터 처리 효율화</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">정책 준수 강화</h3>
+          <p class="mt-2 text-gray-600">브랜드 세이프티 지표 개선, 위반 리스크 감소, 운영 리소스 절감</p>
+        </div>
+      </div>
+      <p class="mt-4 text-xs text-gray-500">※ 플랫폼 정책상 자동 차단 범위는 제한될 수 있으며 운영팀의 최종 확인 과정을 전제로 합니다.</p>
+    </div>
+  </section>
+
+  <!-- Results -->
+  <section id="results" class="section py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">검증된 성과</h2>
+      <p class="mt-3 text-gray-600">캠페인/인벤토리별로 상이할 수 있으나, 아래는 실전 운영을 통해 반복적으로 확인한 핵심 지표 예시입니다.</p>
+      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
+          <div class="text-3xl font-extrabold" data-count="+35%">+35%</div>
+          <div class="mt-1 text-gray-600">eCPM 개선</div>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
+          <div class="text-3xl font-extrabold" data-count="+22%">+22%</div>
+          <div class="mt-1 text-gray-600">Active View 향상</div>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
+          <div class="text-3xl font-extrabold" data-count="-18%">-18%</div>
+          <div class="mt-1 text-gray-600">IVT 비중 감소</div>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
+          <div class="text-3xl font-extrabold" data-count="+40%">+40%</div>
+          <div class="mt-1 text-gray-600">Fill Rate 개선</div>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-gray-500">※ 실제 성과는 타겟, 메시지, 딜 구성, 업종 특성, 계절성에 따라 달라질 수 있습니다.</p>
+    </div>
+  </section>
+
+  <!-- Cases -->
+  <section id="cases" class="section py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">활용 사례</h2>
+      <p class="mt-3 text-gray-600">뉴스/커뮤니티/앱 리워드 등 다양한 유형에서 지표 개선을 달성했습니다.</p>
+      <div class="mt-10 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">뉴스 미디어</h3>
+          <ul class="mt-3 space-y-2 text-gray-600 text-sm">
+            <li>· 오픈비딩 도입으로 경쟁도 상승</li>
+            <li>· 뷰어빌리티 기반 레이아웃 개선</li>
+            <li>· IVT 패턴 탐지 및 차단 전략</li>
+          </ul>
+          <div class="mt-4 text-indigo-600 font-semibold">CTR +16% · eCPM +28%</div>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">커뮤니티/포럼</h3>
+          <ul class="mt-3 space-y-2 text-gray-600 text-sm">
+            <li>· 광고 과밀 해소 · 빈도 관리</li>
+            <li>· 프리미엄 딜 패키징</li>
+            <li>· 크로스프롬션 하우스 캠페인</li>
+          </ul>
+          <div class="mt-4 text-indigo-600 font-semibold">Fill +31% · AV +19%</div>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <h3 class="font-bold">앱 리워드</h3>
+          <ul class="mt-3 space-y-2 text-gray-600 text-sm">
+            <li>· SDK Bidding & 빈도/주기 최적화</li>
+            <li>· 프리로딩 제어로 UX 보장</li>
+            <li>· 인벤토리 캘린더로 공실 방지</li>
+          </ul>
+          <div class="mt-4 text-indigo-600 font-semibold">ARPU +14% · Retention +7%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process" class="section py-16 md:py-24 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">온보딩 3단계</h2>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="text-indigo-600 font-extrabold text-2xl">1</div>
+          <h3 class="mt-2 font-bold">진단 & 목표 합의 (1주)</h3>
+          <p class="mt-2 text-gray-600">트래픽/광고 로그/정책 리스크 점검, 핵심 지표 설정</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="text-indigo-600 font-extrabold text-2xl">2</div>
+          <h3 class="mt-2 font-bold">구축 & 테스트 (1–2주)</h3>
+          <p class="mt-2 text-gray-600">인벤토리·태그·딜·대시보드 세팅, A/B 및 안정화</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <div class="text-indigo-600 font-extrabold text-2xl">3</div>
+          <h3 class="mt-2 font-bold">운영 & 성장 (상시)</h3>
+          <p class="mt-2 text-gray-600">월간 리포트/분기 리뷰, 시즌 딜 패키징, 신규 포맷</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="section py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">자주 묻는 질문</h2>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <details class="rounded-2xl border border-gray-200 p-6 bg-white" open>
+          <summary class="cursor-pointer font-bold">수수료/요금 구조는 어떻게 되나요?</summary>
+          <p class="mt-3 text-gray-600">초기 구축은 무료입니다. 운영 대행·딜 영업·품질 관리 범위에 따라 레브쉐어 또는 관리 수수료(혼합형 가능)로 협의합니다.</p>
+        </details>
+        <details class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <summary class="cursor-pointer font-bold">애드센스와 병행 운용이 가능한가요?</summary>
+          <p class="mt-3 text-gray-600">가능합니다. 애드센스 단독/보완·GAM 전환·혼합 운용 등 현재 구조에 맞는 이행 경로를 제시합니다.</p>
+        </details>
+        <details class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <summary class="cursor-pointer font-bold">최소 요건이 있나요?</summary>
+          <p class="mt-3 text-gray-600">정책 준수, ads.txt/app-ads.txt, 로그 접근성 등이 필요합니다. 트래픽 기준은 매체 성격별로 상이합니다.</p>
+        </details>
+        <details class="rounded-2xl border border-gray-200 p-6 bg-white">
+          <summary class="cursor-pointer font-bold">무효 트래픽(IVT) 우려에 어떻게 대응하나요?</summary>
+          <p class="mt-3 text-gray-600">트래픽 소스 점검, 이상 패턴 모니터링, 광고 운영 가이드를 제공해 GIVT/SIVT 리스크를 상시 관리합니다.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-rose-50">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">지금, 인벤토리의 최대치를 확인하세요</h2>
+          <p class="mt-3 text-gray-600">간단한 정보를 남겨주시면 담당자가 빠르게 연락드려 맞춤 수익화 전략을 제안드립니다.</p>
+          <ul class="mt-6 space-y-3 text-gray-700">
+            <li class="flex gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 첫 설계 컨설팅 무료</li>
+            <li class="flex gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 타겟/인벤토리 진단 리포트 제공</li>
+            <li class="flex gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 첫 달 운영비 50% 할인(프로모션)</li>
+          </ul>
+        </div>
+        <form id="leadForm" class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="text-sm font-medium">이름 *</label>
+              <input required type="text" name="name" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600" />
+            </div>
+            <div>
+              <label class="text-sm font-medium">회사명 *</label>
+              <input required type="text" name="company" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600" />
+            </div>
+            <div>
+              <label class="text-sm font-medium">연락처 *</label>
+              <input required type="tel" name="phone" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600" />
+            </div>
+            <div>
+              <label class="text-sm font-medium">이메일 *</label>
+              <input required type="email" name="email" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600" />
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-sm font-medium">운영 채널</label>
+              <select name="channel" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600">
+                <option>웹</option>
+                <option>모바일 웹</option>
+                <option>iOS 앱</option>
+                <option>Android 앱</option>
+                <option>복합(웹+앱)</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-sm font-medium">월간 트래픽(선택)</label>
+              <select name="traffic" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600">
+                <option>미정</option>
+                <option>100만 PV 미만</option>
+                <option>100–500만 PV</option>
+                <option>500–1,000만 PV</option>
+                <option>1,000만 PV 이상</option>
+              </select>
+            </div>
+            <div class="md:col-span-2">
+              <label class="text-sm font-medium">문의 내용</label>
+              <textarea rows="4" name="message" class="mt-1 w-full rounded-lg border-gray-300 focus:ring-indigo-600 focus:border-indigo-600" placeholder="현재 상황과 목표를 간단히 적어주세요"></textarea>
+            </div>
+            <div class="md:col-span-2">
+              <label class="inline-flex items-start gap-2 text-sm text-gray-700">
+                <input type="checkbox" required class="mt-1 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600" />
+                <span>개인정보 수집 및 이용에 동의합니다. (상담 및 서비스 안내 목적, 보유기간 3년)</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="mt-4 inline-flex w-full items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-700">문의 보내기</button>
+          <p id="formSuccess" class="hidden mt-3 text-sm text-green-600">문의가 성공적으로 전송되었습니다! 빠르게 연락드리겠습니다.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 bg-white">
+    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
+      <div>
+        <div class="font-extrabold">Publisher Monetization</div>
+        <p class="mt-2 text-gray-600">구글 애드매니저 무료 구축 · 오픈비딩/SDK 입찰 · AI 검수 · 정책/브랜드 세이프티 컨설팅</p>
+      </div>
+      <div>
+        <div class="font-semibold">서비스</div>
+        <ul class="mt-2 space-y-2 text-gray-600">
+          <li><a href="#overview">수익화 개요</a></li>
+          <li><a href="#partnerships">파트너십</a></li>
+          <li><a href="#adserver">광고 서버</a></li>
+          <li><a href="#ai">AI 검수</a></li>
+          <li><a href="#results">성과</a></li>
+          <li><a href="#cases">사례</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="font-semibold">연락처</div>
+        <ul class="mt-2 space-y-2 text-gray-600">
+          <li>이메일: <a href="mailto:biz @example.com" class="text-indigo-600">biz @example.com</a></li>
+          <li>전화: 02-000-0000</li>
+          <li>상담: 평일 09:00–18:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-200 py-6 text-center text-xs text-gray-500">© 2025 Your Company. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
