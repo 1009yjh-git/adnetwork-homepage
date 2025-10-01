@@ -95,7 +95,7 @@ body {
   }
 
   .desktop-nav {
-    display: flex; /* 데스크톱에서 메뉴 보임 */
+    display: flex;
     align-items: center;
     gap: 25px;
   }
@@ -113,6 +113,61 @@ body {
 
   .mobile-menu {
     display: none !important; /* 데스크톱에서 모바일 메뉴 항상 숨김 */
+  }
+}
+
+/* --- NEW HERO SECTION STYLES --- */
+.hero-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh; /* 최소 높이 설정 */
+  padding: 80px 20px;
+  color: #fff;
+  text-align: center;
+  background-image: url('../images/hero-section-image.webp'); /* 배경 이미지 경로 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* 반투명 오버레이 */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
+  .hero-content p {
+    font-size: 1em;
   }
 }
 
