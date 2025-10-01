@@ -39,17 +39,51 @@
 
   <!-- NAV -->
   <header class="glass">
-    <nav class="nav">
-      <div class="logo">Nextpaper MNC <span class="pill">GCPP</span></div>
-      <button id="menuBtn">☰</button>
-      <div id="mobileNav" class="hidden">
-        <a href="#about">소개</a>
-        <a href="#partners">파트너십</a>
-        <a href="#network">네트워크</a>
-        <a href="#services">서비스</a>
-        <a href="#airay">AI Ray</a>
-        <a href="#video">영상</a>
-        <a href="#contact">문의</a>
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          
+          <!-- 로고 -->
+          <div class="flex-shrink-0">
+            <a href="#about" onclick="scrollToSection('about')" class="text-xl font-bold text-blue-700 focus-visible">
+              Nextpaper MNC
+            </a>
+          </div>
+          
+          <!-- 데스크톱 메뉴 -->
+          <div class="hidden md:block">
+            <div class="ml-10 flex items-baseline space-x-4">
+              <a href="#about" onclick="scrollToSection('about')" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible">소개</a>
+              <a href="#partners" onclick="scrollToSection('partners')" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible">파트너십</a>
+              <a href="#network" onclick="scrollToSection('network')" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible">네트워크</a>
+              <a href="#services" onclick="scrollToSection('services')" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible">서비스</a>
+              <a href="#airay" onclick="scrollToSection('airay')" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible">AI Ray</a>
+              <a href="#video" onclick="scrollToSection('video')" class="text-gray-700 hover:text-blue-700 px-3 py-2 rounded-md text-sm font-medium transition-colors focus-visible">프리미엄 영상</a>
+              <a href="#contact" onclick="scrollToSection('contact')" class="bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-800 transition-colors focus-visible">문의하기</a>
+            </div>
+          </div>
+
+          <!-- 모바일 메뉴 버튼 -->
+          <div class="md:hidden">
+            <button id="mobile-menu-button" class="text-gray-700 hover:text-blue-700 p-2 rounded-md focus-visible" aria-label="모바일 메뉴 열기" tabindex="0">
+              <span class="material-icons">menu</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 모바일 메뉴 -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a href="#about" onclick="scrollToSection('about'); toggleMobileMenu()" class="text-gray-700 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible">소개</a>
+          <a href="#partners" onclick="scrollToSection('partners'); toggleMobileMenu()" class="text-gray-700 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible">파트너십</a>
+          <a href="#network" onclick="scrollToSection('network'); toggleMobileMenu()" class="text-gray-700 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible">네트워크</a>
+          <a href="#services" onclick="scrollToSection('services'); toggleMobileMenu()" class="text-gray-700 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible">서비스</a>
+          <a href="#airay" onclick="scrollToSection('airay'); toggleMobileMenu()" class="text-gray-700 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible">AI Ray</a>
+          <a href="#video" onclick="scrollToSection('video'); toggleMobileMenu()" class="text-gray-700 hover:text-blue-700 block px-3 py-2 rounded-md text-base font-medium transition-colors focus-visible">프리미엄 영상</a>
+          <a href="#contact" onclick="scrollToSection('contact'); toggleMobileMenu()" class="bg-blue-700 text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-blue-800 transition-colors focus-visible">문의하기</a>
+        </div>
       </div>
     </nav>
   </header>
