@@ -1,367 +1,171 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>구글 애드매니저(feat.애드센스, 애드몹) 웹/앱 서비스 수익화 및 오픈비딩·SDK 입찰, AI 자동 검수 서비스</title>
-  <meta name="description" content="앱/웹 퍼블리셔를 위한 종합 수익화 솔루션. 구글 애드매니저 무료 구축, 오픈비딩·SDK 입찰, 프리미엄 딜, AI 소재 자동 검수, 정책/브랜드 세이프티 컨설팅." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght @400;500;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>구글 애드매니저 & 애드몹 공식 MCM, AI 기반 브랜드 세이프티 | Nextpaper MNC</title>
+  <meta name="description" content="넥스트페이퍼는 Google Ad Manager·AdMob 공식 MCM/GCPP로 AppLovin, Pangle, InMobi, Digital Turbine 등과도 공식 파트너십을 보유하고 있으며, AI Ray(광고·콘텐츠 대상 인공지능 자동검수 솔루션)와 프리미엄 영상 인벤토리를 제공합니다." />
+  <meta name="theme-color" content="#0b1324" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Nextpaper MNC | 구글 애드매니저 & 애드몹 공식 MCM, AI 기반 브랜드 세이프티" />
+  <meta property="og:description" content="넥스트페이퍼는 Google Ad Manager·AdMob 공식 MCM/GCPP로 AppLovin, Pangle, InMobi, Digital Turbine 등과도 공식 파트너십을 보유하고 있으며, AI Ray(광고·콘텐츠 대상 인공지능 자동검수 솔루션)와 프리미엄 영상 인벤토리를 제공합니다." />
+  <meta property="og:image" content="assets/og-cover.png" />
+  <meta property="og:site_name" content="Nextpaper MNC" />
+
   <link rel="canonical" href="https://1009yjh-git.github.io/adnetwork-homepage/">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- 로컬 minify CSS -->
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+
+  <!-- Organization JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Nextpaper MNC",
+    "url":"https://1009yjh-git.github.io/adnetwork-homepage/",
+    "description":"Google Ad Manager · AdMob 공식 MCM / 2023 GCPP. AI Ray(광고·콘텐츠 대상 인공지능 자동검수 솔루션)와 프리미엄 영상 인벤토리를 제공합니다. AppLovin, Pangle, InMobi, Digital Turbine 등과도 공식 파트너십을 보유하고 있습니다.",
+    "sameAs": [],
+    "knowsAbout": ["Google","Ad Manager","AdMob","AdSense","ADX","AppLovin","Pangle","InMobi","Digital Turbine","App","Web","Programmatic","Open Bidding","Mediation","SDK Bidding","Advertising","Monetization","GNI","MCM","GCPP","AI Ray","Brand Safety","Rewarded Ads","Voting Service","In-stream Video"],
+    "award":["Google Certified Publishing Partner (2023)","GNI Korea 2023-2025 Monetization Speaker","2025 Google Korea Media Partners Day Speaker","2025 APAC Android TV Summit Speaker"]
+  }
+  </script>
 </head>
-<body class="antialiased text-gray-900">
-  <!-- Header -->
-  <header class="fixed top-0 inset-x-0 z-50">
-    <div class="glass border-b border-gray-200/60">
-      <div class="container mx-auto px-4">
-        <div class="flex items-center justify-between h-16">
-          <a href="#home" class="font-extrabold text-lg tracking-tight">Nextpaper AdNetwork Service</a>
-          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
-            <a href="#overview" class="hover:text-indigo-600">수익화 개요</a>
-            <a href="#partnerships" class="hover:text-indigo-600">파트너십</a>
-            <a href="#adserver" class="hover:text-indigo-600">광고 서버</a>
-            <a href="#ai-ray" class="hover:text-indigo-600">AI 검수</a>
-            <a href="#results" class="hover:text-indigo-600">성과</a>
-            <a href="#cases" class="hover:text-indigo-600">사례</a>
-            <a href="#faq" class="hover:text-indigo-600">FAQ</a>
-          </nav>
-        </div>
+
+<body>
+
+  <!-- NAV -->
+  <header class="glass">
+    <nav class="nav">
+      <div class="logo">Nextpaper MNC <span class="pill">GCPP</span></div>
+      <button id="menuBtn">☰</button>
+      <div id="mobileNav" class="hidden">
+        <a href="#about">소개</a>
+        <a href="#partners">파트너십</a>
+        <a href="#network">네트워크</a>
+        <a href="#services">서비스</a>
+        <a href="#airay">AI Ray</a>
+        <a href="#video">영상</a>
+        <a href="#contact">문의</a>
       </div>
-    </div>
-    <div id="mobileNav" class="hidden md:hidden bg-white border-b border-gray-200">
-      <div class="container mx-auto px-4 py-3 space-y-3 text-sm font-medium">
-        <a href="#overview" class="block">수익화 개요</a>
-        <a href="#partnerships" class="block">파트너십</a>
-        <a href="#adserver" class="block">광고 서버</a>
-        <a href="#ai-ray" class="block">AI 검수</a>
-        <a href="#results" class="block">성과</a>
-        <a href="#cases" class="block">사례</a>
-        <a href="#faq" class="block">FAQ</a>
-        <a href="#contact" class="block font-semibold text-indigo-600">상담 문의</a>
-      </div>
-    </div>
+    </nav>
   </header>
 
-  <!-- Hero -->
-  <section id="home" class="section pt-28 md:pt-32">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <div class="inline-flex items-center gap-2 rounded-full bg-indigo-50 px-3 py-1 text-indigo-700 text-sm font-semibold mb-4">
-            <strong>구글 애드매니저</strong> 기반 웹/앱 서비스 광고 수익화
-          </div>
-          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight tracking-tight">
-            앱/웹 어디서나 손쉬운 <span class="text-indigo-600">광고 수익화</span>
-          </h1>
-          <p class="mt-4 text-gray-600 text-lg">세계 최상위 광고 수요 플랫폼들(Google, Applovin, Pangle, InMobi 등)을 활용한 광고 수익화 및 무료 광고 서버 구축에 대한 국내 최고 전문가의 컨설팅, AI Ray(AI 자동 검수 솔루션)를 통해 정책 준수와 브랜드 보호를 한번에!</p>
-          <div class="mt-6 flex flex-col sm:flex-row gap-3">
-            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold shadow hover:bg-indigo-700">상담 요청하기</a>
-            <a href="#ai-ray" class="inline-flex items-center justify-center rounded-xl border border-gray-300 px-5 py-3 font-semibold hover:bg-gray-50">브랜드 보호 보기</a>
-          </div>
-          <div class="mt-6 flex flex-wrap gap-3 text-sm text-gray-600">
-            <span class="badge bg-gray-100">Google Ad Manager MCM & GCPP</span> <!-- GCPP portal로 링크를 걸고 싶어-->
-            <span class="badge bg-gray-100">GNI Korea 2023, 2024 2025 발표</span> <!-- 각 연도별로 GNI Korea 행사 홍보 링크를 걸고 싶어 -->
-            <span class="badge bg-gray-100">Google 인증 세계 최초 AI 소재 검수 자동화 시스템 운영</span> <!-- 아직 작성하지 않았지만, 보도자료 링크를 걸고 싶어 -->
-          </div>
-        </div>
-        <div class="relative">
-          <div class="aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-indigo-100 to-rose-100 p-1">
-            <div class="h-full w-full rounded-2xl bg-white grid place-items-center">
-              <div class="text-center p-6">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="mx-auto h-16 w-16 text-indigo-600" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 12h18M3 19h18"/></svg>
-                <strong class="mt-4 text-xl font-bold">광고 수익화의 핵심은 Viewability 최적화</strong>
-                <p class="mt-2 text-gray-600">최적의 Viewability는 좋은 지면만으로 나오지 않습니다.</p>
-                <p class="mt-2 text-gray-600">광고의 위치, 크기, 로딩속도 등 다양한 요소를 고려해야 합니다.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- 1. 소개 -->
+<section id="about" class="section">
+  <h1>넥스트페이퍼 애드네트워크 사업 소개</h1>
+
+  <div class="timeline-graph-wrapper">
+    <div class="timeline-graph">
+      <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+        <!-- 꺾은선 -->
+        <polyline 
+          points="50,250 200,200 400,180 600,120 800,80 950,50"
+          fill="none" stroke="#2563eb" stroke-width="3" />
+
+        <!-- 포인트 -->
+        <circle class="point" cx="50" cy="250" r="8" data-year="2019" data-text="구글 애드매니저 공식 MCM 계약 체결"/>
+        <circle class="point" cx="200" cy="200" r="8" data-year="2021" data-text="게시자 파트너 100개사 돌파"/>
+        <circle class="point" cx="400" cy="180" r="8" data-year="2022" data-text="게시자 파트너 200개사 돌파"/>
+        <circle class="point" cx="600" cy="120" r="8" data-year="2023" data-text="GCPP 획득 및 GNI Korea 발표 (2023~2025)"/>
+        <circle class="point" cx="800" cy="80" r="8" data-year="2024" data-text="보상형 광고 기반 투표 서비스 론칭"/>
+        <circle class="point" cx="950" cy="50" r="8" data-year="2025" data-text="AI 기반 브랜드 세이프티 솔루션 오픈 / 영상 퀴즈 서비스 예정"/>
+      </svg>
+      <div id="tooltip" class="tooltip"></div>
+    </div>
+  </div>
+</section>
+
+  <!-- 2. 파트너십 -->
+  <section id="partners" class="section">
+    <h2>글로벌 파트너십</h2>
+    <div class="partners-grid">
+      <img src="assets/logo-google.png" alt="Google" onclick="openModal('Google')">
+      <img src="assets/logo-applovin.png" alt="AppLovin" onclick="openModal('AppLovin')">
+      <img src="assets/logo-pangle.png" alt="Pangle" onclick="openModal('Pangle')">
+    </div>
+  </section>
+  <div id="partnerModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeModal()">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- 3. 전문성 & 신뢰 -->
+  <section id="cred" class="section">
+    <h2>전문성 & 신뢰</h2>
+    <p>구글에서 공식 인정받은 전문성</p>
+    <iframe width="100%" height="400" src="https://www.youtube.com/embed/영상ID" frameborder="0" allowfullscreen></iframe>
+    <div class="swiper credSwiper" style="margin-top:20px">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">2023년 GCPP 획득</div>
+        <div class="swiper-slide">2023~2025 GNI 발표</div>
+        <div class="swiper-slide">대형 매체 컨설팅 경험</div>
       </div>
     </div>
   </section>
 
-  <!-- Overview -->
-  <section id="overview" class="section py-16 md:py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">손쉬운 앱/웹 서비스 광고 수익화</h2>
-      <p class="mt-3 text-gray-600">Google Ad Manager 공식 MCM만이 제공할 수 있는 인벤토리 관리 방식으로 개발/운영 리소스를 최소화하고 광고 수익화가 가능합니다.</p>
-      <p class="mt-3 text-gray-600">직접 관리하기 어려우시다면, 공식 MCM의 권한인 계정 관리 방식으로 고객님의 계정을 저희 Nextpaper에서 관리해드릴 수 있습니다.</p>
+  <!-- 4. 파트너 네트워크 -->
+  <section id="network" class="section">
+    <h2>파트너 네트워크</h2>
+    <div class="network-grid">
+      <div class="network-col">
+        <img src="assets/partners-app.png" alt="앱/웹 서비스" usemap="#appmap">
+      </div>
+      <div class="network-col">
+        <img src="assets/partners-media.png" alt="언론사" usemap="#mediamap">
+      </div>
+    </div>
+    <map name="appmap">
+      <area shape="rect" coords="10,10,100,100" href="https://lpoint.com" target="_blank" alt="L.POINT">
+    </map>
+  </section>
 
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <div class="h-10 w-10 grid place-items-center rounded-lg bg-indigo-600 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 5a2 2 0 012-2h3.5a1 1 0 01.8.4l1.9 2.4H16a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"/></svg>
-          </div>
-          <h3 class="mt-4 font-bold text-lg">Display Ads</h3> <!-- 아이콘 변경 필요 -->
-          <p class="mt-2 text-gray-600">Desktop 및 Mobile Web 어디든 보상형 광고, 전면 광고, 앵커 광고 및 배너 광고 그리고 네이티브 형식까지 다양한 형식으로 운영할 수 있습니다.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <div class="h-10 w-10 grid place-items-center rounded-lg bg-indigo-600 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l3 5 6 .9-4.3 4.2L18 18l-6-3.2L6 18l1.3-6.9L3 6.9 9 6z"/></svg>
-          </div>
-          <h3 class="mt-4 font-bold text-lg">Video Ads</h3> <!-- 아이콘 변경 필요 -->
-          <p class="mt-2 text-gray-600">동영상과 플레이어만 있다면 In-stream 동영상 광고를 운영할 수 있고, Youtube 동영상 광고 수요가 노출되어 수익을 극대화할 수 있습니다.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <div class="h-10 w-10 grid place-items-center rounded-lg bg-indigo-600 text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v4H4zM4 10h16v4H4zM4 16h16v4H4z"/></svg>
-          </div>
-          <h3 class="mt-4 font-bold text-lg">Mobile App Ads</h3> <!-- 아이콘 변경 필요 -->
-          <p class="mt-2 text-gray-600">Apple Appstore나 Google Playstore에 등록된 앱이라면 언제든 최상위 광고 수요를 통해 다방면으로 광고 수익화를 할 수 있습니다.</p>
-        </div>
+  <!-- 5. 자체 서비스 -->
+  <section id="services" class="section">
+    <h2>자체 서비스</h2>
+    <div class="swiper serviceSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/vote1.jpg" alt="투표서비스"></div>
+        <div class="swiper-slide"><img src="assets/vote2.jpg" alt="투표서비스"></div>
       </div>
     </div>
   </section>
 
-  <!-- Partnerships -->
-  <section id="partnerships" class="section py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">폭넓은 파트너십 (SDK 입찰 · 오픈비딩 · 우선검토)</h2>
-      <p class="mt-3 text-gray-600">Google은 기본, Applovin, Pangle, InMobi, Digital Turbine 등 SDK 입찰 및 미디에이션 파트너십을 보유하고 있습니다.</p>
-      <p class="mt-3 text-gray-600">The Trade Desk, RTB House, Appier 등 수요가 많은 First Look & Preferred Deal 파트너십을 보유하고 있습니다.</p>
-      <p class="mt-3 text-gray-600">InMobi, PubMatic, Fluct, OpenX, Equativ, Ad Generation 등 Open Bidding 파트너십을 보유하고 있습니다.</p>
-      <p class="mt-3 text-gray-600">이러한 파트너십을 활용해 더 많은 입찰과 경쟁, 최선의 수익을 창출하기 위한 거래 구조를 설계합니다.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold text-lg">SDK Bidding</h3> <!-- 아이콘 추가 필요 -->
-          <p class="mt-2 text-gray-600">앱 환경에 최적화된 실시간 입찰과 워터폴을 혼용하여 요청 단가를 극대화합니다.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold text-lg">First Look & Preferred Deal</h3> <!-- 아이콘 추가 필요 -->
-          <p class="mt-2 text-gray-600">광고주/대행사 또는 구매자 네트워크와의 협상을 통해 웹/앱 모두에서 단가 향상을 할 수 있습니다.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold text-lg">Open Bidding</h3> <!-- 아이콘 추가 필요 -->
-          <p class="mt-2 text-gray-600">Header Bidding이나 Pre-Bidding과 다르게 온보딩 기능으로도 손쉽게 단가 향상을 할 수 있습니다.</p>
-        </div>
-      </div>
+  <!-- 6. AI Ray -->
+  <section id="airay" class="section">
+    <h2>AI Ray</h2>
+    <div>
+      <a href="ai-ray-for-creatives.html">AI Ray for Creatives →</a><br>
+      <a href="ai-ray-for-publishers.html">AI Ray for Publishers →</a>
     </div>
   </section>
 
-  <!-- Ad Server (Free build) 여기부터 수정할것 -->
-  <section id="adserver" class="section py-16 md:py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">무료 광고 서버 구축 (디스플레이 · 동영상)</h2>
-      <p class="mt-3 text-gray-600">처음부터 제대로 설계하면, 운영은 훨씬 쉬워집니다.</p>
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
-        <ul class="space-y-3">
-          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 인벤토리 체계·네이밍 컨벤션 수립 (웹/모웹/앱·포맷/사이즈/위치)</li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 타게팅 키·레이블·빈도/우선순위·Ad Rules 구성</li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> VAST/IMA 인스트림·아웃스트림 영상 광고 최적화</li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 반응형·지연 로드·CLS 최소화 태그 배포</li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 무광고 구간 최소화를 위한 하우스/백필 캠페인</li>
-        </ul>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">정책/품질 기본 세팅</h3>
-          <p class="mt-2 text-gray-600">ads.txt · app-ads.txt · sellers.json · CMP/TCF/GPP 연동 · 페이지 속도/뷰어빌리티 균형 설계</p>
-          <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
-            <div class="rounded-xl bg-gray-100 p-4">
-              <div class="text-2xl font-extrabold">무료</div>
-              <div class="text-gray-600">초기 구축 비용</div>
-            </div>
-            <div class="rounded-xl bg-gray-100 p-4">
-              <div class="text-2xl font-extrabold">협의</div>
-              <div class="text-gray-600">운영 수수료/레브쉐어</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- 7. 프리미엄 영상 광고 -->
+  <section id="video" class="section">
+    <h2>프리미엄 영상 광고</h2>
+    <a href="premium-video-ads.html">자세히 보기 →</a>
+  </section>
+
+  <!-- 8. 문의하기 -->
+  <section id="contact" class="section">
+    <h2>문의하기</h2>
+    <div class="form-embed">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScitFBJv1obfFdBlTU20aBEPPwDELBUaaQKAfEEHYVtqItCeQ/viewform?embedded=true"></iframe>
     </div>
   </section>
 
-  <!-- AI Creative Review -->
-  <section id="ai-ray" class="section py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">브랜드 보호를 위한 AI 광고 소재 자동 검수</h2>
-      <p class="mt-3 text-gray-600">보기 전에 걸러내는 안전장치. 운영 리소스는 줄이고 정책 리스크는 낮춥니다.</p>
-      <div class="mt-10 grid md:grid-cols-4 gap-6">
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">멀티모달 분석</h3>
-          <p class="mt-2 text-gray-600">이미지 OCR · 영상 프레임 · 오디오 ASR로 성인물·도박·의약품 등 위험 신호 탐지</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">룰 + ML 하이브리드</h3>
-          <p class="mt-2 text-gray-600">블랙/화이트리스트 · 금칙어 · 로고 매칭 + ML 스코어로 오탐/미탐 최소화</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">워크플로우 자동화</h3>
-          <p class="mt-2 text-gray-600">실시간 알림 → 우선순위 큐레이션 → 애드 리뷰 센터 처리 효율화</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">정책 준수 강화</h3>
-          <p class="mt-2 text-gray-600">브랜드 세이프티 지표 개선, 위반 리스크 감소, 운영 리소스 절감</p>
-        </div>
-      </div>
-      <p class="mt-4 text-xs text-gray-500">※ 플랫폼 정책상 자동 차단 범위는 제한될 수 있으며 운영팀의 최종 확인 과정을 전제로 합니다.</p>
-    </div>
-  </section>
+  <!-- 플로팅 버튼 -->
+  <div class="floating-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+    문의하기
+  </div>
 
-  <!-- Results -->
-  <section id="results" class="section py-16 md:py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">검증된 성과</h2>
-      <p class="mt-3 text-gray-600">캠페인/인벤토리별로 상이할 수 있으나, 아래는 실전 운영을 통해 반복적으로 확인한 핵심 지표 예시입니다.</p>
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
-          <div class="text-3xl font-extrabold" data-count="+35%">+35%</div>
-          <div class="mt-1 text-gray-600">eCPM 개선</div>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
-          <div class="text-3xl font-extrabold" data-count="+22%">+22%</div>
-          <div class="mt-1 text-gray-600">Active View 향상</div>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
-          <div class="text-3xl font-extrabold" data-count="-18%">-18%</div>
-          <div class="mt-1 text-gray-600">IVT 비중 감소</div>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white text-center">
-          <div class="text-3xl font-extrabold" data-count="+40%">+40%</div>
-          <div class="mt-1 text-gray-600">Fill Rate 개선</div>
-        </div>
-      </div>
-      <p class="mt-6 text-sm text-gray-500">※ 실제 성과는 타겟, 메시지, 딜 구성, 업종 특성, 계절성에 따라 달라질 수 있습니다.</p>
-    </div>
-  </section>
-
-  <!-- Cases -->
-  <section id="cases" class="section py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">활용 사례</h2>
-      <p class="mt-3 text-gray-600">뉴스/커뮤니티/앱 리워드 등 다양한 유형에서 지표 개선을 달성했습니다.</p>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">뉴스 미디어</h3>
-          <ul class="mt-3 space-y-2 text-gray-600 text-sm">
-            <li>· 오픈비딩 도입으로 경쟁도 상승</li>
-            <li>· 뷰어빌리티 기반 레이아웃 개선</li>
-            <li>· IVT 패턴 탐지 및 차단 전략</li>
-          </ul>
-          <div class="mt-4 text-indigo-600 font-semibold">CTR +16% · eCPM +28%</div>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">커뮤니티/포럼</h3>
-          <ul class="mt-3 space-y-2 text-gray-600 text-sm">
-            <li>· 광고 과밀 해소 · 빈도 관리</li>
-            <li>· 프리미엄 딜 패키징</li>
-            <li>· 크로스프롬션 하우스 캠페인</li>
-          </ul>
-          <div class="mt-4 text-indigo-600 font-semibold">Fill +31% · AV +19%</div>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <h3 class="font-bold">앱 리워드</h3>
-          <ul class="mt-3 space-y-2 text-gray-600 text-sm">
-            <li>· SDK Bidding & 빈도/주기 최적화</li>
-            <li>· 프리로딩 제어로 UX 보장</li>
-            <li>· 인벤토리 캘린더로 공실 방지</li>
-          </ul>
-          <div class="mt-4 text-indigo-600 font-semibold">ARPU +14% · Retention +7%</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process -->
-  <section id="process" class="section py-16 md:py-24 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">온보딩 3단계</h2>
-      <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <div class="text-indigo-600 font-extrabold text-2xl">1</div>
-          <h3 class="mt-2 font-bold">진단 & 목표 합의 (1주)</h3>
-          <p class="mt-2 text-gray-600">트래픽/광고 로그/정책 리스크 점검, 핵심 지표 설정</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <div class="text-indigo-600 font-extrabold text-2xl">2</div>
-          <h3 class="mt-2 font-bold">구축 & 테스트 (1–2주)</h3>
-          <p class="mt-2 text-gray-600">인벤토리·태그·딜·대시보드 세팅, A/B 및 안정화</p>
-        </div>
-        <div class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <div class="text-indigo-600 font-extrabold text-2xl">3</div>
-          <h3 class="mt-2 font-bold">운영 & 성장 (상시)</h3>
-          <p class="mt-2 text-gray-600">월간 리포트/분기 리뷰, 시즌 딜 패키징, 신규 포맷</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq" class="section py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">자주 묻는 질문</h2>
-      <div class="mt-8 grid md:grid-cols-2 gap-6">
-        <details class="rounded-2xl border border-gray-200 p-6 bg-white" open>
-          <summary class="cursor-pointer font-bold">수수료/요금 구조는 어떻게 되나요?</summary>
-          <p class="mt-3 text-gray-600">초기 구축은 무료입니다. 운영 대행·딜 영업·품질 관리 범위에 따라 레브쉐어 또는 관리 수수료(혼합형 가능)로 협의합니다.</p>
-        </details>
-        <details class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <summary class="cursor-pointer font-bold">애드센스와 병행 운용이 가능한가요?</summary>
-          <p class="mt-3 text-gray-600">가능합니다. 애드센스 단독/보완·GAM 전환·혼합 운용 등 현재 구조에 맞는 이행 경로를 제시합니다.</p>
-        </details>
-        <details class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <summary class="cursor-pointer font-bold">최소 요건이 있나요?</summary>
-          <p class="mt-3 text-gray-600">정책 준수, ads.txt/app-ads.txt, 로그 접근성 등이 필요합니다. 트래픽 기준은 매체 성격별로 상이합니다.</p>
-        </details>
-        <details class="rounded-2xl border border-gray-200 p-6 bg-white">
-          <summary class="cursor-pointer font-bold">무효 트래픽(IVT) 우려에 어떻게 대응하나요?</summary>
-          <p class="mt-3 text-gray-600">트래픽 소스 점검, 이상 패턴 모니터링, 광고 운영 가이드를 제공해 GIVT/SIVT 리스크를 상시 관리합니다.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="section py-16 md:py-24 bg-gradient-to-br from-indigo-50 to-rose-50">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <h2 class="text-2xl md:text-3xl font-extrabold tracking-tight">지금, 인벤토리의 최대치를 확인하세요</h2>
-          <p class="mt-3 text-gray-600">간단한 정보를 남겨주시면 담당자가 빠르게 연락드려 맞춤 수익화 전략을 제안드립니다.</p>
-          <ul class="mt-6 space-y-3 text-gray-700">
-            <li class="flex gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 첫 설계 컨설팅 무료</li>
-            <li class="flex gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 타겟/인벤토리 진단 리포트 제공</li>
-            <li class="flex gap-3"><span class="mt-1 h-5 w-5 rounded-full bg-indigo-600 text-white grid place-items-center">✓</span> 첫 달 운영비 50% 할인(프로모션)</li>
-          </ul>
-        </div>
-        <div class="relative rounded-2xl overflow-hidden" style="padding-top: 73.6%; min-height: 550px;">
-          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScitFBJv1obfFdBlTU20aBEPPwDELBUaaQKAfEEHYVtqItCeQ/viewform?embedded=true" class="absolute top-0 left-0 w-full h-full border-0" frameborder="0" marginheight="0" marginwidth="0">로드 중…</iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-gray-200 bg-white">
-    <div class="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
-      <div>
-        <div class="font-extrabold">Publisher Monetization</div>
-        <p class="mt-2 text-gray-600">구글 애드매니저 무료 구축 · 오픈비딩/SDK 입찰 · AI 검수 · 정책/브랜드 세이프티 컨설팅</p>
-      </div>
-      <div>
-        <div class="font-semibold">서비스</div>
-        <ul class="mt-2 space-y-2 text-gray-600">
-          <li><a href="#overview">수익화 개요</a></li>
-          <li><a href="#partnerships">파트너십</a></li>
-          <li><a href="#adserver">광고 서버</a></li>
-          <li><a href="#ai-ray">AI 검수</a></li>
-          <li><a href="#results">성과</a></li>
-          <li><a href="#cases">사례</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="font-semibold">연락처</div>
-        <ul class="mt-2 space-y-2 text-gray-600">
-          <li>이메일: <a href="mailto:jhyoon@thenextpaper.com" class="text-indigo-600">jhyoon@thenextpaper.com</a></li>
-          <li>전화: 070-7791-3566</li>
-          <li>상담: 평일 09:00–18:00</li>
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-gray-200 py-6 text-center text-xs text-gray-500">© 2025 Nextpaper MnC inc. All rights reserved.</div>
-  </footer>
-
-  <script src="script.js"></script>
+  <!-- 로컬 minify JS -->
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.min.js"></script>
 </body>
 </html>
