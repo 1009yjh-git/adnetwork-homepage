@@ -401,3 +401,133 @@ h2 {
     padding: 8px 10px;
   }
 }
+
+/* --- CREDIBILITY SECTION --- */
+#credibility h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.credibility-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.credibility-col:first-child {
+  border-right: 1px solid #e5e7eb;
+  padding-right: 40px;
+}
+
+.credibility-item {
+  margin-bottom: 30px;
+}
+.credibility-item:last-child {
+  margin-bottom: 0;
+}
+
+.credibility-item h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 8px;
+}
+
+.credibility-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+.credibility-logo {
+  height: 50px;
+  width: auto;
+}
+
+.mcm-info h4 {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.mcm-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.mcm-info li {
+  color: #1f2937;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.credibility-icon {
+  margin-bottom: 10px;
+}
+
+.partner-carousel-section h3 {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #374151;
+}
+
+.logo-carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-carousel ul {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  animation: scroll 40s linear infinite;
+}
+
+.logo-carousel li {
+  flex-shrink: 0;
+  padding: 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-carousel img {
+  height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.logo-carousel li:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .credibility-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .credibility-col:first-child {
+    border-right: none;
+    padding-right: 0;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
