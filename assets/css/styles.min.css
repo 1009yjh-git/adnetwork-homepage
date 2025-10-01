@@ -1,1 +1,348 @@
-html{scroll-behavior:smooth}body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Noto Sans KR,Apple SD Gothic Neo,'Malgun Gothic',sans-serif;margin:0;background:#fff;color:#0f172a;padding-top:64px}.container{max-width:1120px;margin:0 auto}.section{padding:60px 20px;max-width:1200px;margin:auto;scroll-margin-top:96px}h2{margin-bottom:20px;font-size:24px;font-weight:700}.logo{font-weight:900;font-size:20px}.badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;padding:4px 10px;font-size:14px;font-weight:600}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#eef2ff;color:#3730a3;font-size:12px;margin-left:6px}.hidden{display:none}.swiper{width:100%;height:100%}.swiper-slide{display:flex;align-items:center;justify-content:center}.hero-slide{height:90vh;color:#fff;position:relative;background-size:cover;background-position:center}.hero-slide h1{font-size:40px;background:rgba(0,0,0,.5);padding:20px;border-radius:10px}.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);align-items:center;justify-content:center;z-index:1000}.modal-content{background:#fff;padding:20px;border-radius:12px;max-width:600px;width:90%}.modal-close{float:right;cursor:pointer;font-size:20px}.network-grid{display:flex;gap:20px;flex-wrap:wrap}.network-col{flex:1;min-width:280px}.network-col img{width:100%;height:auto;cursor:pointer}.serviceSwiper img{width:100%;border-radius:12px}.form-embed{position:relative;padding-top:56.25%;height:0;overflow:hidden;border:1px solid #ddd;border-radius:12px}.form-embed iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}.floating-btn{position:fixed;bottom:20px;right:20px;z-index:999;background:#2563eb;color:#fff;padding:16px 20px;border-radius:50px;font-weight:700;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.3)}.timeline-graph-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch}.timeline-graph{min-width:1000px;padding-bottom:20px;position:relative}.timeline-graph svg{width:100%;height:auto}.point{fill:#fff;stroke:#2563eb;stroke-width:3;cursor:pointer;transition:r .2s ease,fill .2s ease}.point:hover{fill:#2563eb;r:10}.tooltip{position:absolute;background:#fff;border:1px solid #ddd;border-radius:8px;padding:10px 14px;font-size:14px;box-shadow:0 4px 10px rgba(0,0,0,.1);display:none;pointer-events:none;white-space:nowrap;transform:translate(-50%,-120%);z-index:10}.tooltip::after{content:"";position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);border:6px solid transparent;border-top-color:#fff}@media(max-width:768px){.timeline-graph{min-width:800px}.tooltip{font-size:13px;padding:8px 10px}}
+/*
+ * 이 파일은 읽기 쉬운 원본 CSS 파일입니다.
+ * 이전 minified 파일에 새로운 헤더 스타일을 추가하고 가독성을 위해 포맷했습니다.
+ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Noto Sans KR, Apple SD Gothic Neo, 'Malgun Gothic', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #0f172a;
+  /* 헤더 높이만큼 body 상단에 padding을 주어 내용이 가려지지 않게 함 */
+  padding-top: 80px;
+}
+
+/* --- NEW HEADER STYLES --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 80px;
+  max-width: 1200px; /* section과 너비 일치 */
+  margin: 0 auto;
+}
+
+.header-logo .logo-image {
+  height: 35px; /* 모바일 로고 높이 */
+  width: auto;
+  vertical-align: middle;
+}
+
+.mobile-menu-button {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block; /* 모바일에서 보임 */
+}
+
+.desktop-nav {
+  display: none; /* 모바일에서 숨김 */
+}
+
+.mobile-menu {
+  background-color: white;
+  padding: 10px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.mobile-menu.hidden {
+  display: none;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+/* --- 데스크톱용 미디어 쿼리 --- */
+@media (min-width: 768px) {
+  body {
+    padding-top: 150px; /* 데스크톱 헤더 높이 */
+  }
+
+  .header-container {
+    height: 150px;
+  }
+
+  .header-logo .logo-image {
+    height: 50px; /* 데스크톱 로고 높이 */
+  }
+
+  .mobile-menu-button {
+    display: none; /* 데스크톱에서 햄버거 버튼 숨김 */
+  }
+
+  .desktop-nav {
+    display: flex; /* 데스크톱에서 메뉴 보임 */
+    align-items: center;
+    gap: 25px;
+  }
+
+  .desktop-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .desktop-nav a:hover {
+    color: #2563eb;
+  }
+
+  .mobile-menu {
+    display: none !important; /* 데스크톱에서 모바일 메뉴 항상 숨김 */
+  }
+}
+
+
+/* --- 기존 스타일 (가독성 좋게 포맷) --- */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  scroll-margin-top: 160px; /* 데스크톱 헤더 높이에 맞게 조정 */
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #3730a3;
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-slide {
+  height: 90vh;
+  color: #fff;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide h1 {
+  font-size: 40px;
+  background: rgba(0, 0, 0, .5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+}
+
+.modal-close {
+  float: right;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.partner-logo-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.partners-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-grid img {
+    height: 50px;
+    width: auto;
+}
+
+.network-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.network-col {
+  flex: 1;
+  min-width: 280px;
+}
+
+.network-col img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.serviceSwiper img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.form-embed {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+
+.form-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: #2563eb;
+  color: #fff;
+  padding: 16px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .3);
+}
+
+.timeline-graph-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.timeline-graph {
+  min-width: 1000px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.timeline-graph svg {
+  width: 100%;
+  height: auto;
+}
+
+.point {
+  fill: #fff;
+  stroke: #2563eb;
+  stroke-width: 3;
+  cursor: pointer;
+  transition: r .2s ease, fill .2s ease;
+}
+
+.point:hover {
+  fill: #2563eb;
+  r: 10;
+}
+
+.tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .1);
+  display: none;
+  pointer-events: none;
+  white-space: nowrap;
+  transform: translate(-50%, -120%);
+  z-index: 10;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
+}
+
+@media(max-width:768px) {
+  .timeline-graph {
+    min-width: 800px;
+  }
+  .tooltip {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+}
