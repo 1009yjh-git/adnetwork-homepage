@@ -79,11 +79,11 @@ body {
 /* --- 데스크톱용 미디어 쿼리 --- */
 @media (min-width: 768px) {
   body {
-    padding-top: 150px; /* 데스크톱 헤더 높이 */
+    padding-top: 100px; /* 데스크톱 헤더 높이 */
   }
 
   .header-container {
-    height: 150px;
+    height: 100px;
   }
 
   .header-logo .logo-image {
@@ -727,6 +727,18 @@ h2 {
 .partner-logo-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.partner-logo-grid img {
+  height: 35px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+}
+ wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
