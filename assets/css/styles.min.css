@@ -679,13 +679,12 @@ h2 {
 
 .service-pane.active {
   display: block;
+  max-width: 800px; /* 콘텐츠 최대 너비 제한 */
+  margin: 0 auto; /* 중앙 정렬 */
 }
 
-.service-pane-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
+.service-image-wrapper {
+  margin-top: 20px;
 }
 
 .service-image-wrapper img {
@@ -694,46 +693,48 @@ h2 {
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+.service-image-caption {
+  font-size: 13px;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 10px;
+}
+
 .service-text-wrapper h3 {
   font-size: 22px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .service-text-wrapper p {
   font-size: 16px;
   line-height: 1.7;
   color: #4b5563;
+  text-align: center;
 }
 
 .service-pane-partners {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid #e5e7eb;
+  margin-top: 40px;
 }
 
 .service-pane-partners h4 {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .partner-logo-grid {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 .partner-logo-grid img {
-  height: 30px;
+  height: 35px;
   width: auto;
   filter: grayscale(100%);
   opacity: 0.8;
-}
-
-@media (max-width: 768px) {
-  .service-pane-layout {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
 }
