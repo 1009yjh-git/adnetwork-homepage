@@ -688,7 +688,11 @@ h2 {
 }
 
 .service-image-wrapper img {
-  width: 100%;
+  max-height: 350px;
+  width: auto; /* 비율에 맞춰 너비 자동 조절 */
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
@@ -727,18 +731,6 @@ h2 {
 .partner-logo-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
-
-.partner-logo-grid img {
-  height: 35px;
-  width: auto;
-  filter: grayscale(100%);
-  opacity: 0.8;
-}
- wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
