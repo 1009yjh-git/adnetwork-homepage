@@ -415,6 +415,10 @@ h2 {
   margin-bottom: 60px;
 }
 
+.credibility-col {
+  box-sizing: border-box;
+}
+
 .credibility-col:first-child {
   border-right: 1px solid #e5e7eb;
   padding-right: 40px;
