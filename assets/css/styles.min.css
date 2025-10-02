@@ -264,11 +264,12 @@ h2 {
   font-size: 20px;
 }
 
-.partner-logo-button {
+.partner-logo-link {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
+    display: inline-block; /* a 태그에 display 속성 추가 */
 }
 
 .partners-grid {
