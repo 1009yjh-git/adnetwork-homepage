@@ -442,7 +442,7 @@ h2 {
 }
 
 .credibility-logo {
-  height: 50px;
+  max-height: 50px;
   width: auto;
   max-width: 150px;
 }
