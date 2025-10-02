@@ -437,6 +437,8 @@ h2 {
   font-size: 15px;
   line-height: 1.6;
   color: #4b5563;
+  overflow-wrap: break-word;
+  word-break: keep-all;
 }
 
 .credibility-logo {
