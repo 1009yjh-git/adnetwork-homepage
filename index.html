@@ -25,6 +25,130 @@
       height: 50px;
       object-fit: contain;
     }
+
+    /* Section Redesign CSS */
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 8px;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .two-column-layout {
+      display: flex;
+      gap: 40px;
+      margin-top: 30px;
+      align-items: flex-start;
+    }
+    .two-column-layout .column {
+      flex: 1;
+      text-align: left;
+    }
+    .two-column-layout .column h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #0b1324;
+    }
+    .two-column-layout .column p {
+      line-height: 1.6;
+    }
+    .two-column-layout .column ul {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 20px;
+    }
+    .two-column-layout .column li {
+      margin-bottom: 12px;
+      color: #333;
+      font-weight: 500;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover {
+      background-color: #1d4ed8;
+      color: white;
+    }
+    .video-mockup {
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .video-mockup img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    /* For Contact Us Section */
+    .form-embed-container {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 800px; /* Limit max width for better appearance */
+      margin: 20px auto 0;
+      padding-top: 125%; /* Adjust this based on form height */
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .form-embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Logo Wall */
+    .logo-wall-swiper {
+      width: 100%;
+      margin-top: 40px;
+    }
+    .logo-wall-swiper .swiper-wrapper {
+      transition-timing-function: linear !important; /* Important for continuous scroll */
+      align-items: center;
+    }
+    .logo-wall-swiper .swiper-slide {
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-wall-swiper img {
+      height: 36px; /* Uniform height */
+      filter: grayscale(100%);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+    .logo-wall-swiper img:hover {
+      filter: grayscale(0%);
+      opacity: 1;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .two-column-layout {
+        flex-direction: column;
+        gap: 50px;
+      }
+      .form-embed-container {
+        padding-top: 180%; /* Taller for mobile */
+      }
+    }
   </style>
 
   <!-- Organization JSON-LD -->
@@ -47,27 +171,29 @@
   <!-- NAV -->
   <header class="site-header">
     <div class="header-container">
-      <a href="#about" data-scroll-to="about" class="header-logo">
+      <a href="#hero" data-scroll-to="hero" class="header-logo">
           <img src="assets/images/logos/nextpaper-logo-black-gray.webp" alt="Nextpaper MNC Logo" class="logo-image">
       </a>
       <nav class="desktop-nav">
-          <a href="#about" data-scroll-to="about">소개</a>
-          <a href="#partners" data-scroll-to="partners">파트너십</a>
-          <a href="#network" data-scroll-to="network">네트워크</a>
-          <a href="#services" data-scroll-to="services">서비스</a>
+          <a href="#hero" data-scroll-to="hero">소개</a>
+          <a href="#credibility" data-scroll-to="credibility">전문성</a>
+          <a href="#gni-workshop" data-scroll-to="gni-workshop">노하우</a>
+          <a href="#own-services" data-scroll-to="own-services">프리미엄 앱 파트너 서비스</a>
           <a href="#airay" data-scroll-to="airay">AI Ray</a>
-          <a href="#video" data-scroll-to="video">프리미엄 영상</a>
+          <a href="#video-ads" data-scroll-to="video-ads">프리미엄 영상 광고</a>
+          <a href="#publisher-partners" data-scroll-to="publisher-partners">파트너 소개</a>
           <a href="#contact" data-scroll-to="contact">문의하기</a>
       </nav>
       <button id="mobile-menu-button" class="mobile-menu-button" aria-label="모바일 메뉴 열기">☰</button>
     </div>
     <nav id="mobile-menu" class="mobile-menu hidden">
-        <a href="#about" data-scroll-to="about" class="mobile-nav-link">소개</a>
-        <a href="#partners" data-scroll-to="partners" class="mobile-nav-link">파트너십</a>
-        <a href="#network" data-scroll-to="network" class="mobile-nav-link">네트워크</a>
-        <a href="#services" data-scroll-to="services" class="mobile-nav-link">서비스</a>
+        <a href="#hero" data-scroll-to="hero" class="mobile-nav-link">소개</a>
+        <a href="#credibility" data-scroll-to="credibility" class="mobile-nav-link">전문성</a>
+        <a href="#gni-workshop" data-scroll-to="gni-workshop" class="mobile-nav-link">노하우</a>
+        <a href="#own-services" data-scroll-to="own-services" class="mobile-nav-link">프리미엄 앱 파트너 서비스</a>
         <a href="#airay" data-scroll-to="airay" class="mobile-nav-link">AI Ray</a>
-        <a href="#video" data-scroll-to="video" class="mobile-nav-link">프리미엄 영상</a>
+        <a href="#video-ads" data-scroll-to="video-ads" class="mobile-nav-link">프리미엄 영상 광고</a>
+        <a href="#publisher-partners" data-scroll-to="publisher-partners" class="mobile-nav-link">파트너 소개</a>
         <a href="#contact" data-scroll-to="contact" class="mobile-nav-link">문의하기</a>
     </nav>
   </header>
@@ -75,12 +201,12 @@
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
     <div class="hero-content">
-      <h1>구글이 인정한 전문성, AI 기술로 당신의 수익을 극대화하세요.</h1>
+      <h1>구글이 인정한 전문성과 노하우 그리고 AI 기술로 당신의 수익을 극대화하세요.</h1>
       <p>구글 뉴스 이니셔티브(GNI) 등 구글에서 역량을 인정받은 최적화 노하우, 그리고 AI Ray 및 투표서비스 등 국내 최상위 파트너들이 선택한 기술력으로 귀사의 앱/웹 서비스가 최고의 수익을 달성하도록 만들겠습니다.</p>
     </div>
   </section>
 
-  <!-- 2. 글로벌 네트워크와 공인된 전문성 -->
+  <!-- 글로벌 네트워크와 공인된 전문성 -->
   <section id="credibility" class="section">
     <h2>글로벌 네트워크와 공인된 전문성</h2>
     <div class="credibility-grid">
@@ -212,7 +338,7 @@
 
   <!-- Own Services Section -->
   <section id="own-services" class="section">
-    <h2>프리미엄 파트너 서비스</h2>
+    <h2>프리미엄 앱 파트너 서비스</h2>
     <div class="service-tabs-container">
       <div class="service-tabs">
         <button class="service-tab active" data-tab="vote">투표</button>
@@ -232,10 +358,10 @@
           <div class="service-pane-partners">
             <h4>제휴 파트너</h4>
             <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="카카오페이"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="비씨카드 페이북"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="하나카드"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="오락"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.kakaopay.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="카카오페이"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://web.paybooc.co.kr/" data-aos-url="https://play.google.com/store/apps/details?id=kvp.jjy.MispAndroid320&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%ED%8E%98%EC%9D%B4%EB%B6%81-isp/id369125087"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="비씨카드 페이북"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.hanacard.co.kr/" data-aos-url="https://play.google.com/store/apps/details?id=com.hanaskcard.paycla&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%ED%95%98%EB%82%98pay-%ED%95%98%EB%82%98%EC%B9%B4%EB%93%9C/id847268987"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="하나카드"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.okcashbag.com/displayadmin.do" data-aos-url="https://play.google.com/store/apps/details?id=com.skplanet.ocb.locker&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%98%A4%EB%9D%BD-%EB%A7%8C%EB%B3%B4%EA%B8%B0-%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD-%EC%95%B1%ED%85%8C%ED%81%AC/id6480400926"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="오락"></a>
             </div>
           </div>
         </div>
@@ -251,7 +377,7 @@
           <div class="service-pane-partners">
             <h4>제휴 파트너</h4>
             <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="오케이캐시백"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.okcashbag.com/displayadmin.do" data-aos-url="https://play.google.com/store/apps/details?id=com.skmc.okcashbag.home_google&hl=ko" data-ios-url="https://apps.apple.com/kr/app/ok-cashbag/id358731598"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="오케이캐시백"></a>
             </div>
           </div>
         </div>
@@ -267,10 +393,10 @@
            <div class="service-pane-partners">
             <h4>제휴 파트너 (예정)</h4>
             <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="카카오버스"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="카카오페이"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="엘포인트"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="하나머니"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://service.kakaomobility.com/cs/faqs/content/?category=121" data-aos-url="https://play.google.com/store/apps/details?id=com.astroframe.seoulbus&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B2%84%EC%8A%A4-%EB%B2%84%EC%8A%A4-%EC%A7%80%ED%95%98%EC%B2%A0-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%A0%95%EB%B3%B4/id1095206186"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="카카오버스"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.kakaopay.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="카카오페이"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.lpoint.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.lottemembers.android&hl=ko" data-ios-url="https://apps.apple.com/kr/app/l-point-with-l-pay/id473250588"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="엘포인트"></a>
+              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.hanamembership.com/" data-aos-url="https://play.google.com/store/apps/details?id=kr.co.hanamembers.hmscustomer&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%ED%95%98%EB%82%98%EB%A8%B8%EB%8B%88-%ED%8A%B8%EB%9E%98%EB%B8%94%EB%A1%9C%EA%B7%B8/id1038288833"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="하나머니"></a>
             </div>
           </div>
         </div>
@@ -278,8 +404,115 @@
     </div>
   </section>
 
-  <!-- 1. 소개 -->
-  <section id="about" class="section">
+  <!-- AI Ray -->
+  <section id="airay" class="section">
+    <h2>AI Ray가 지켜주는 브랜드 가치</h2>
+    <p class="section-subtitle">넥스트페이퍼의 자체 AI 기술이 광고 소재와 게시물 콘텐츠를 자동으로 검수하여 브랜드와 수익을 보호합니다.</p>
+    <div class="two-column-layout">
+      <div class="column">
+        <h3>AI Ray for Creatives</h3>
+        <p>저품질 광고 때문에 방문자를 잃고 싶지 않으시죠? AI Ray는 유해/선정성 광고 소재를 자동으로 감지하고 차단하여, 매체의 품격과 사용자 경험을 동시에 지켜드립니다.</p>
+        <ul>
+          <li>✓ 광고 소재 유해성 자동 분류</li>
+          <li>✓ 구글 애드 리뷰 센터 연동 자동 차단</li>
+          <li>✓ 정책 위반 리스크 감소 및 운영 효율화</li>
+        </ul>
+        <a href="ai-ray-for-creatives.html" class="cta-button">AI Ray for Creatives 자세히 보기</a>
+      </div>
+      <div class="column">
+        <h3>AI Ray for Publishers</h3>
+        <p>게시자 정책 위반으로 광고 수익 하락을 경험하셨나요? AI Ray는 게시자의 서비스에 게시된 콘텐츠를 사전 분석하여, 정책 위반 사항을 최소화하여 게시자의 수익을 보호합니다.</p>
+        <ul>
+          <li>✓ 콘텐츠 카테고리 분석 및 타겟팅 제외</li>
+          <li>✓ 텍스트/이미지/영상 멀티모달 유해성 검증</li>
+          <li>✓ 실시간 모니터링 및 리포트 제공</li>
+        </ul>
+        <a href="ai-ray-for-publishers.html" class="cta-button">AI Ray for Publishers 자세히 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 프리미엄 영상 광고 -->
+  <section id="video-ads" class="section">
+    <h2>사용자 경험을 해치지 않는 고품격 영상 광고</h2>
+    <p class="section-subtitle">언론사, 커뮤니티 등 웹 게시자에 최적화된 영상 광고로 최고의 수익을 경험하세요. 주요 콘텐츠의 일부처럼 느껴지는 자연스러운 광고 노출로 사용자의 거부감은 낮추고, 높은 주목도를 바탕으로 최고의 광고 단가를 유치합니다.</p>
+    <div class="two-column-layout">
+      <div class="column">
+        <h3>주요 특징</h3>
+        <ul>
+          <li>✓ 높은 광고 단가(eCPM)</li>
+          <li>✓ 높은 조회가능성(Viewability) 및 시청완료율(VCR)</li>
+          <li>✓ 유튜브(Youtube) 등 프리미엄 광고 수요 확보</li>
+          <li>✓ 자연스러운 In-Stream / In-Read 광고 형식</li>
+        </ul>
+        <a href="premium-video-ads.html" class="cta-button">프리미엄 영상 광고 자세히 보기</a>
+      </div>
+      <div class="column">
+        <div class="video-mockup">
+          <img src="https://via.placeholder.com/600x400.png?text=In-Stream+Ad+Mockup" alt="인스트림 광고 예시">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 기타 게시자 파트너 -->
+  <section id="publisher-partners" class="section">
+    <h2>수많은 파트너가 함께합니다</h2>
+    <p class="section-subtitle">언론사, 커뮤니티, 앱 서비스 등 다양한 분야의 파트너들이 넥스트페이퍼의 기술력과 전문성을 신뢰하고 있습니다.</p>
+    <div class="swiper logo-wall-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/google-logo.webp" alt="Google"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pangle-logo.webp" alt="Pangle"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/applovin-logo.webp" alt="AppLovin"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/inmobi-logo.webp" alt="InMobi"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="Kakaopay"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/digital-turbine-logo.webp" alt="Digital Turbine"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="Paybooc"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/the-trade-desk-logo.webp" alt="The Trade Desk"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="OK Cashbag"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/rtb-house-logo.webp" alt="RTB House"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="L.Point"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pubmatic-logo.webp" alt="Pubmatic"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="Hanacard"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/fluct-logo.webp" alt="Fluct"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="Hanamoney"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/openx-logo.webp" alt="OpenX"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="Kakaobus"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="Olock"></div>
+        <!-- Duplicate for seamless loop -->
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/google-logo.webp" alt="Google"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pangle-logo.webp" alt="Pangle"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/applovin-logo.webp" alt="AppLovin"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/inmobi-logo.webp" alt="InMobi"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="Kakaopay"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/digital-turbine-logo.webp" alt="Digital Turbine"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="Paybooc"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/the-trade-desk-logo.webp" alt="The Trade Desk"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="OK Cashbag"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/rtb-house-logo.webp" alt="RTB House"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="L.Point"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pubmatic-logo.webp" alt="Pubmatic"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="Hanacard"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/fluct-logo.webp" alt="Fluct"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="Hanamoney"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/openx-logo.webp" alt="OpenX"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="Kakaobus"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="Olock"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 문의하기 -->
+  <section id="contact" class="section">
+    <h2>문의하기</h2>
+    <p class="section-subtitle">서비스 제휴 및 광고 수익화 관련 문의사항을 남겨주시면, 최고의 전문가가 빠르게 답변해 드립니다.</p>
+    <div class="form-embed-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScitFBJv1obfFdBlTU20aBEPPwDELBUaaQKAfEEHYVtqItCeQ/viewform?embedded=true" title="문의 양식"></iframe>
+    </div>
+  </section>
+
+  <!-- 푸터 - 회사소개 -->
+  <section id="footer" class="section">
     <h2>회사 연혁</h2> <!-- 제목 수정 -->
     <div class="timeline-graph-wrapper">
       <div class="timeline-graph">
@@ -302,87 +535,6 @@
     </div>
   </section>
 
-  <!-- 2. 파트너십 -->
-  <section id="partners" class="section">
-    <h2>글로벌 파트너십</h2>
-    <div class="partners-grid">
-      <button data-partner="Google" class="partner-logo-button"><img src="assets/images/logos/demand-partners/google.webp" alt="Google"></button>
-      <button data-partner="AppLovin" class="partner-logo-button"><img src="assets/images/logos/demand-partners/applovin.webp" alt="AppLovin"></button>
-      <button data-partner="Pangle" class="partner-logo-button"><img src="assets/images/logos/demand-partners/pangle.webp" alt="Pangle"></button>
-    </div>
-  </section>
-  <div id="partnerModal" class="modal">
-    <div class="modal-content">
-      <span id="modal-close-button" class="modal-close">&times;</span>
-      <div id="modal-body"></div>
-    </div>
-  </div>
-
-  <!-- 3. 전문성 & 신뢰 -->
-  <section id="cred" class="section">
-    <h2>전문성 & 신뢰</h2>
-    <p>구글에서 공식 인정받은 전문성</p>
-    <!-- TODO: 'dQw4w9WgXcQ'를 실제 영상 ID로 교체해주세요. -->
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="임베드된 유튜브 영상" frameborder="0" allowfullscreen></iframe>
-    <div class="swiper credSwiper" style="margin-top:20px">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">2023년 GCPP 획득</div>
-        <div class="swiper-slide">2023~2025 GNI 발표</div>
-        <div class="swiper-slide">대형 매체 컨설팅 경험</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. 파트너 네트워크 -->
-  <section id="network" class="section">
-    <h2>파트너 네트워크</h2>
-    <div class="network-grid">
-      <div class="network-col">
-        <img src="assets/images/partners-app.png" alt="앱/웹 서비스" usemap="#appmap">
-      </div>
-      <div class="network-col">
-        <img src="assets/images/partners-media.png" alt="언론사" usemap="#mediamap">
-      </div>
-    </div>
-    <map name="appmap">
-      <area shape="rect" coords="10,10,100,100" href="https://lpoint.com" target="_blank" alt="L.POINT">
-    </map>
-  </section>
-
-  <!-- 5. 자체 서비스 -->
-  <section id="services" class="section">
-    <h2>자체 서비스</h2>
-    <div class="swiper serviceSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/images/vote1.jpg" alt="투표서비스"></div>
-        <div class="swiper-slide"><img src="assets/images/vote2.jpg" alt="투표서비스"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 6. AI Ray -->
-  <section id="airay" class="section">
-    <h2>AI Ray</h2>
-    <div>
-      <a href="ai-ray-for-creatives.html">AI Ray for Creatives →</a><br>
-      <a href="ai-ray-for-publishers.html">AI Ray for Publishers →</a>
-    </div>
-  </section>
-
-  <!-- 7. 프리미엄 영상 광고 -->
-  <section id="video" class="section">
-    <h2>프리미엄 영상 광고</h2>
-    <a href="premium-video-ads.html">자세히 보기 →</a>
-  </section>
-
-  <!-- 8. 문의하기 -->
-  <section id="contact" class="section">
-    <h2>문의하기</h2>
-    <div class="form-embed">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScitFBJv1obfFdBlTU20aBEPPwDELBUaaQKAfEEHYVtqItCeQ/viewform?embedded=true" title="문의 양식"></iframe>
-    </div>
-  </section>
-
   <!-- 플로팅 버튼 -->
   <div id="floating-contact-btn" data-scroll-to="contact" class="floating-btn">
     문의하기
@@ -391,5 +543,51 @@
   <!-- 로컬 minify JS -->
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/script.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const handleDeviceSpecificRedirect = (event) => {
+        const link = event.currentTarget;
+        if (!link.dataset.pcUrl && !link.dataset.aosUrl && !link.dataset.iosUrl) {
+            return;
+        }
+
+        event.preventDefault();
+
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        let targetUrl = link.dataset.pcUrl || '#';
+
+        if (/android/i.test(userAgent)) {
+          targetUrl = link.dataset.aosUrl || link.dataset.pcUrl || '#';
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          targetUrl = link.dataset.iosUrl || link.dataset.pcUrl || '#';
+        }
+
+        if (targetUrl && targetUrl !== '#') {
+          window.open(targetUrl, '_blank', 'noopener,noreferrer');
+        } else {
+          console.warn('No specific URL for this device or a placeholder URL was used.');
+        }
+      };
+
+      const partnerLinks = document.querySelectorAll('.service-partner-link, .partner-logo-link');
+      partnerLinks.forEach(link => {
+        link.addEventListener('click', handleDeviceSpecificRedirect);
+      });
+
+      // Initialize Logo Wall Swiper
+      new Swiper('.logo-wall-swiper', {
+        loop: true,
+        freeMode: true,
+        slidesPerView: 'auto',
+        spaceBetween: 60,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        speed: 8000,
+      });
+    });
+  </script>
 </body>
 </html>
