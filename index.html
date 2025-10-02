@@ -40,7 +40,10 @@
   <header class="site-header">
     <div class="header-container">
       <a href="#about" data-scroll-to="about" class="header-logo">
-          <img src="assets/images/logos/nextpaper-logo-black-gray.webp" alt="Nextpaper MNC Logo" class="logo-image">
+          <picture>
+              <source media="(min-width: 768px)" srcset="nextpaper-logo-black-gray.webp">
+              <img src="nextpaper-symbol-black.webp" alt="Nextpaper MNC Logo" class="logo-image">
+          </picture>
       </a>
       <nav class="desktop-nav">
           <a href="#about" data-scroll-to="about">소개</a>
@@ -78,7 +81,7 @@
     <div class="credibility-grid">
       <div class="credibility-col">
         <div class="credibility-item">
-          <img src="assets/images/logos/google-certified-publishing-partner.webp" alt="Google Certified Publishing Partner" class="credibility-logo">
+          <img src="assets/images/google-certified-publishing-partner.webp" alt="Google Certified Publishing Partner" class="credibility-logo">
           <h3>공식 인증 퍼블리싱 파트너</h3>
           <p>GCPP는 구글이 요구하는 최고 수준의 전문성을 갖추고, 게시자 수익 성장에 기여한 파트너에게만 부여하는 자격입니다. 넥스트페이퍼는 엄격한 심사 기준을 통과하여 고객에게 최상의 수익 최적화 서비스를 제공할 자격을 입증했습니다.</p>
           <div class="mcm-info">
@@ -92,7 +95,7 @@
       </div>
       <div class="credibility-col">
         <div class="credibility-item">
-          <img src="assets/images/logos/google-news-initiative.webp" alt="Google News Initiative" class="credibility-logo">
+          <img src="assets/images/google-news-initiative.webp" alt="Google News Initiative" class="credibility-logo">
           <h3>구글 뉴스 이니셔티브 파트너</h3>
           <p>GNI는 저널리즘의 미래를 구축하기 위해 구글이 뉴스 기관과 협력하는 프로그램입니다. 넥스트페이퍼는 GNI의 파트너로서 뉴스 게시자의 지속 가능한 성장을 지원합니다.</p>
         </div>
@@ -112,158 +115,34 @@
       <div class="swiper logo-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <a href="https://admanager.google.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="Google (Adx, SDK, PD, OB 등)" data-description="세계 최대 광고 수요를 바탕으로 한 높은 채움(Fill-Rate)과 안정적인 수익을 제공합니다. 브랜드 세이프티 필터링과 모든 주요 포맷을 지원합니다.">
-              <img src="assets/images/logos/demand-partners/google-logo.webp" alt="Google">
-            </a>
+            <button class="partner-logo-button" data-partner="Google"><img src="assets/images/google-logo.webp" alt="Google Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.pangleglobal.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="Pangle (SDK, 미디에이션)" data-description="TikTok의 강력한 알고리즘을 기반으로, 한국을 포함한 아시아권에서 높은 성과를 보이는 숏폼(Short-form) 동영상 광고를 제공합니다.">
-              <img src="assets/images/logos/demand-partners/pangle-logo.webp" alt="Pangle">
-            </a>
+            <button class="partner-logo-button" data-partner="Pangle"><img src="assets/images/pangle-logo.webp" alt="Pangle Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.applovin.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="AppLovin (SDK, MAX 미디에이션)" data-description="강력한 보상형 동영상 수요를 통해 게임 앱에서 높은 광고 단가(eCPM)를 기대할 수 있으며, 신규 사용자 획득(UA) 캠페인에도 효과적입니다.">
-              <img src="assets/images/logos/demand-partners/applovin-logo.webp" alt="AppLovin">
-            </a>
+            <button class="partner-logo-button" data-partner="AppLovin"><img src="assets/images/applovin-logo.webp" alt="AppLovin Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.inmobi.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="InMobi (SDK, 미디에이션, OB)" data-description="아시아·인도 시장에서 강력, 브랜드 및 퍼포먼스 수요 혼합.">
-              <img src="assets/images/logos/demand-partners/inmobi-logo.webp" alt="InMobi">
-            </a>
+            <button class="partner-logo-button" data-partner="InMobi"><img src="assets/images/inmobi-logo.webp" alt="InMobi Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.digitalturbine.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="Digital Turbine (미디에이션, SDK 예정)" data-description="Telco 및 OEM 단말 기반 광고 네트워크, 앱 보상형·비디오 강세.">
-              <img src="assets/images/logos/demand-partners/digital-turbine-logo.webp" alt="Digital Turbine">
-            </a>
+            <button class="partner-logo-button" data-partner="DigitalTurbine"><img src="assets/images/digital-turbine-logo.webp" alt="Digital Turbine Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.thetradedesk.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="The Trade Desk (Adx, PD)" data-description="세계 최대 독립 DSP, 브랜드·CTV(Connected TV)·프리미엄 광고주 수요 큼.">
-              <img src="assets/images/logos/demand-partners/the-trade-desk-logo.webp" alt="The Trade Desk">
-            </a>
+            <button class="partner-logo-button" data-partner="TheTradeDesk"><img src="assets/images/the-trade-desk-logo.webp" alt="The Trade Desk Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.rtbhouse.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="RTB House (Adx, PD)" data-description="AI 기반 리타게팅 DSP, 전자상거래/리마케팅 캠페인 강세.">
-              <img src="assets/images/logos/demand-partners/rtb-house-logo.webp" alt="RTB House">
-            </a>
+            <button class="partner-logo-button" data-partner="RTBHouse"><img src="assets/images/rtb-house-logo.webp" alt="RTB House Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://pubmatic.com/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="PubMatic (Adx, PD, OB)" data-description="글로벌 SSP, 대형 퍼블리셔 네트워크, Header Bidding/CTV 강세.">
-              <img src="assets/images/logos/demand-partners/pubmatic-logo.webp" alt="PubMatic">
-            </a>
+            <button class="partner-logo-button" data-partner="PubMatic"><img src="assets/images/pubmatic-logo.webp" alt="PubMatic Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://corp.fluct.jp/" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="Fluct (Adx, PD, OB)" data-description="일본 시장의 강력한 SSP 파트너로, 최근 아시아 전역으로 영향력을 확대하고 있어 새로운 광고 수익 기회를 제공합니다.">
-              <img src="assets/images/logos/demand-partners/fluct-logo.webp" alt="Fluct">
-            </a>
+            <button class="partner-logo-button" data-partner="Fluct"><img src="assets/images/fluct-logo.webp" alt="Fluct Logo"></button>
           </div>
           <div class="swiper-slide">
-            <a href="https://www.openx.com" class="partner-logo-link" target="_blank" rel="noopener noreferrer nofollow" data-title="OpenX (Adx, OB)" data-description="높은 투명성과 업계 최고 수준의 무효 트래픽(IVT) 방지 기술을 강점으로 하는 신뢰도 높은 글로벌 SSP입니다.">
-              <img src="assets/images/logos/demand-partners/openx-logo.webp" alt="OpenX">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- GNI Workshop Section -->
-  <section id="gni-workshop" class="section">
-    <h2>구글이 인정한 광고 수익화 전문성</h2>
-    <div class="gni-intro-text">
-      <p>2023년 GNI 코리아 워크숍 “광고수익화” 파트를 단독 발표해 전문성을 인정 받았습니다.</p>
-    </div>
-    <div class="video-section-layout">
-      <div class="video-player-wrapper">
-        <iframe id="gni-video-player" src="https://www.youtube.com/embed/I1NMafBDmiQ" title="1. 광고 수익화 준비 – 01. 트래픽 증대 고려사항" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="video-playlist-wrapper">
-        <div class="playlist-header">GNI 코리아 발표영상 주요내용</div>
-        <ul id="gni-playlist" class="gni-playlist">
-          <li class="active"><button data-video-id="I1NMafBDmiQ">1. 광고 수익화 준비 – 01. 트래픽 증대 고려사항</button></li>
-          <li><button data-video-id="NPzPGKjqWY8">1. 광고 수익화 준비 – 02. 사용자 경험 개선</button></li>
-          <li><button data-video-id="Ck2WXeprUnE">1. 광고 수익화 준비 – 03. 트래픽 소스 다양화</button></li>
-          <li><button data-video-id="Rk3UrT_DFUY">1. 광고 수익화 준비 – 04. 광고 수익화 솔루션</button></li>
-          <li><button data-video-id="HOajw2GiWTU">1. 광고수익화 준비 – 05. 수익화 플랫폼</button></li>
-          <li><button data-video-id="pcLzLHpm6eY">1. 광고 수익화 준비 – 06. 광고 수익 분석</button></li>
-          <li><button data-video-id="YUnLKArsEG4">1. 광고 수익화 준비 – 07. 광고 수익 최적화 운영</button></li>
-          <li><button data-video-id="j7kwwpxLu0s">1. 광고 수익화 준비 – 08. 구글 프리미엄 광고 상품 사용</button></li>
-          <li><button data-video-id="MD9lSHMrY2s">2. 광고 수익 극대화 – 01. 사용자 경험 분석</button></li>
-          <li><button data-video-id="k6cIORruI7g">2. 광고 수익 극대화 – 02. Core Web Vitals</button></li>
-          <li><button data-video-id="xxMAx4aFosE">2. 광고 수익 극대화 – 03. 사용자 경험 분석 툴</button></li>
-          <li><button data-video-id="IbZ-34hS0_A">2. 광고 수익 극대화 – 04. 핵심 광고 지표</button></li>
-          <li><button data-video-id="-j2WZP2xOYM">2. 광고 수익 극대화 – 05. 광고 성과 분석</button></li>
-          <li><button data-video-id="e331VJL90fs">2. 광고 수익 극대화 – 06. 광고 지표 개선하기</button></li>
-          <li><button data-video-id="gpUnMoB2oRw">3. 프리미엄 광고 사용 – 01. 프리미엄 광고상품 소개</button></li>
-          <li><button data-video-id="z94wFU2PwGI">3. 프리미엄 광고 – 02. 전면 광고에 대한 소개</button></li>
-          <li><button data-video-id="8L6iCy2t6gk">3. 프리미엄 광고 – 03. 리워드 광고에 대한 소개</button></li>
-          <li><button data-video-id="opYK9Kho6EU">4. A/B 테스트 방법론 – 01. 데이터를 활용한 광고 수익 최적화</button></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Own Services Section -->
-  <section id="own-services" class="section">
-    <h2>넥스트페이퍼 자체 서비스</h2>
-    <div class="service-tabs-container">
-      <div class="service-tabs">
-        <button class="service-tab active" data-tab="vote">투표</button>
-        <button class="service-tab" data-tab="prediction">승부예측</button>
-        <button class="service-tab" data-tab="video-quiz">영상 퀴즈 <span class="coming-soon-badge">예정</span></button>
-      </div>
-      <div class="service-tab-content">
-        <div class="service-pane active" id="tab-vote">
-          <div class="service-text-wrapper">
-            <h3>데일리 투표</h3>
-            <p>매일 새롭게 업데이트되는 흥미로운 주제에 대해 투표하고 리워드를 받으세요. 사용자의 높은 참여율을 바탕으로 안정적인 광고 수익을 창출합니다.</p>
-          </div>
-          <div class="service-image-wrapper">
-            <img src="assets/images/services/nextpaper-ad-network-service-vote.webp" alt="투표 서비스 예시 화면">
-            <p class="service-image-caption">투표 서비스의 실제 화면입니다.</p>
-          </div>
-          <div class="service-pane-partners">
-            <h4>제휴 파트너</h4>
-            <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/vote-partner-kakaopay.webp" alt="카카오페이"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-bc-paybooc.webp" alt="비씨카드 페이북"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="하나카드"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-ohrock.webp" alt="오락"></a>
-            </div>
-          </div>
-        </div>
-        <div class="service-pane" id="tab-prediction">
-          <div class="service-text-wrapper">
-            <h3>승부예측</h3>
-            <p>스포츠, 정치, 사회 등 다양한 분야의 이벤트 결과를 예측하고 짜릿한 즐거움과 보상을 함께 얻을 수 있는 서비스입니다. 높은 몰입도는 광고 주목도로 이어집니다.</p>
-          </div>
-          <div class="service-image-wrapper">
-            <img src="assets/images/services/nextpaper-ad-network-service-prediction.webp" alt="승부예측 서비스 예시 화면">
-            <p class="service-image-caption">승부예측 서비스의 실제 화면입니다.</p>
-          </div>
-          <div class="service-pane-partners">
-            <h4>제휴 파트너</h4>
-            <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="오케이캐시백"></a>
-            </div>
-          </div>
-        </div>
-        <div class="service-pane" id="tab-video-quiz">
-          <div class="service-text-wrapper">
-            <h3>영상 퀴즈 (출시 예정)</h3>
-            <p>영상을 보고 퀴즈를 맞히며 리워드를 획득하는 차세대 콘텐츠입니다. 사용자의 자발적인 영상 시청을 유도하여 높은 광고 효율을 기대할 수 있습니다.</p>
-          </div>
-          <div class="service-image-wrapper">
-            <img src="assets/images/services/nextpaper-ad-network-service-video-quiz.webp" alt="영상 퀴즈 서비스 예시 화면">
-            <p class="service-image-caption">영상 퀴즈 서비스의 실제 화면입니다.</p>
-          </div>
-           <div class="service-pane-partners">
-            <h4>제휴 파트너 (예정)</h4>
-            <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="카카오버스"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/vote-partner-kakaopay.webp" alt="카카오페이"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="엘포인트"></a>
-              <a href="#" class="service-partner-link" data-pc-url="#" data-aos-url="#" data-ios-url="#"><img src="assets/images/logos/service-partners/videoquiz-partner-hanamoney.webp" alt="하나머니"></a>
-            </div>
+            <button class="partner-logo-button" data-partner="OpenX"><img src="assets/images/openx-logo.webp" alt="OpenX Logo"></button>
           </div>
         </div>
       </div>
@@ -298,9 +177,9 @@
   <section id="partners" class="section">
     <h2>글로벌 파트너십</h2>
     <div class="partners-grid">
-      <button data-partner="Google" class="partner-logo-button"><img src="assets/images/logos/demand-partners/google.webp" alt="Google"></button>
-      <button data-partner="AppLovin" class="partner-logo-button"><img src="assets/images/logos/demand-partners/applovin.webp" alt="AppLovin"></button>
-      <button data-partner="Pangle" class="partner-logo-button"><img src="assets/images/logos/demand-partners/pangle.webp" alt="Pangle"></button>
+      <button data-partner="Google" class="partner-logo-button"><img src="assets/logo-google.png" alt="Google"></button>
+      <button data-partner="AppLovin" class="partner-logo-button"><img src="assets/logo-applovin.png" alt="AppLovin"></button>
+      <button data-partner="Pangle" class="partner-logo-button"><img src="assets/logo-pangle.png" alt="Pangle"></button>
     </div>
   </section>
   <div id="partnerModal" class="modal">
@@ -330,10 +209,10 @@
     <h2>파트너 네트워크</h2>
     <div class="network-grid">
       <div class="network-col">
-        <img src="assets/images/partners-app.png" alt="앱/웹 서비스" usemap="#appmap">
+        <img src="assets/partners-app.png" alt="앱/웹 서비스" usemap="#appmap">
       </div>
       <div class="network-col">
-        <img src="assets/images/partners-media.png" alt="언론사" usemap="#mediamap">
+        <img src="assets/partners-media.png" alt="언론사" usemap="#mediamap">
       </div>
     </div>
     <map name="appmap">
@@ -346,8 +225,8 @@
     <h2>자체 서비스</h2>
     <div class="swiper serviceSwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/images/vote1.jpg" alt="투표서비스"></div>
-        <div class="swiper-slide"><img src="assets/images/vote2.jpg" alt="투표서비스"></div>
+        <div class="swiper-slide"><img src="assets/vote1.jpg" alt="투표서비스"></div>
+        <div class="swiper-slide"><img src="assets/vote2.jpg" alt="투표서비스"></div>
       </div>
     </div>
   </section>
@@ -384,4 +263,4 @@
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/script.min.js"></script>
 </body>
-</html>>
+</html>
