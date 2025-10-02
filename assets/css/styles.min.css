@@ -571,14 +571,15 @@ h2 {
 }
 
 .video-playlist-wrapper {
-  border: 1px solid #e5e7eb;
+  border: 1px solid #d1d5db;
   border-radius: 8px;
+  background-color: #fff;
 }
 
 .playlist-header {
   padding: 15px;
   font-weight: 600;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #d1d5db;
 }
 
 .gni-playlist {
@@ -704,29 +705,27 @@ h2 {
   color: #4b5563;
 }
 
-.service-partners-section {
-  margin-top: 60px;
-  padding-top: 40px;
+.service-pane-partners {
+  margin-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid #e5e7eb;
 }
 
-.service-partners-section h3 {
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 30px;
-  color: #374151;
+.service-pane-partners h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-.service-partners-grid {
+.partner-logo-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 40px;
+  gap: 25px;
 }
 
-.service-partners-grid img {
-  height: 35px;
+.partner-logo-grid img {
+  height: 30px;
   width: auto;
   filter: grayscale(100%);
   opacity: 0.8;
