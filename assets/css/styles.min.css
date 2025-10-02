@@ -478,6 +478,10 @@ h2 {
   height: 100%;
 }
 
+.logo-swiper .swiper-wrapper {
+  transition-timing-function: linear;
+}
+
 .logo-swiper .swiper-slide {
   width: auto; /* 로고 크기에 맞게 자동 조절 */
   display: flex;
