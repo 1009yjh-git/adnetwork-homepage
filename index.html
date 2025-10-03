@@ -17,139 +17,7 @@
 
   <!-- 로컬 CSS -->
   <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/styles.min.css">
-
-  <style>
-    .service-pane-partners .partner-logo-grid img {
-      width: 50px;
-      height: 50px;
-      object-fit: contain;
-    }
-
-    /* Section Redesign CSS */
-    .section-subtitle {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #666;
-      margin-top: 8px;
-      margin-bottom: 40px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .two-column-layout {
-      display: flex;
-      gap: 40px;
-      margin-top: 30px;
-      align-items: flex-start;
-    }
-    .two-column-layout .column {
-      flex: 1;
-      text-align: left;
-    }
-    .two-column-layout .column h3 {
-      font-size: 1.5rem;
-      font-weight: 600;
-      margin-bottom: 15px;
-      color: #0b1324;
-    }
-    .two-column-layout .column p {
-      line-height: 1.6;
-    }
-    .two-column-layout .column ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin-top: 20px;
-    }
-    .two-column-layout .column li {
-      margin-bottom: 12px;
-      color: #333;
-      font-weight: 500;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #2563eb;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: background-color 0.3s;
-    }
-    .cta-button:hover {
-      background-color: #1d4ed8;
-      color: white;
-    }
-    .video-mockup {
-      border: 1px solid #e5e7eb;
-      border-radius: 8px;
-      padding: 10px;
-      background-color: white;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .video-mockup img {
-      width: 100%;
-      border-radius: 4px;
-    }
-
-    /* For Contact Us Section */
-    .form-embed-container {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      max-width: 800px; /* Limit max width for better appearance */
-      margin: 20px auto 0;
-      padding-top: 125%; /* Adjust this based on form height */
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .form-embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    /* Logo Wall */
-    .logo-wall-swiper {
-      width: 100%;
-      margin-top: 40px;
-    }
-    .logo-wall-swiper .swiper-wrapper {
-      transition-timing-function: linear !important; /* Important for continuous scroll */
-      align-items: center;
-    }
-    .logo-wall-swiper .swiper-slide {
-      width: auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .logo-wall-swiper img {
-      height: 36px; /* Uniform height */
-      filter: grayscale(100%);
-      opacity: 0.7;
-      transition: all 0.3s ease;
-    }
-    .logo-wall-swiper img:hover {
-      filter: grayscale(0%);
-      opacity: 1;
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-      .two-column-layout {
-        flex-direction: column;
-        gap: 50px;
-      }
-      .form-embed-container {
-        padding-top: 180%; /* Taller for mobile */
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/styles.css?v=2.1">
 
   <!-- Organization JSON-LD -->
   <script type="application/ld+json">
@@ -159,7 +27,7 @@
     "name":"Nextpaper MNC",
     "url":"https://1009yjh-git.github.io/adnetwork-homepage/",
     "description":"Google Ad Manager · AdMob 공식 MCM / 2023 GCPP. AI Ray(광고·콘텐츠 대상 인공지능 자동검수 솔루션)와 프리미엄 영상 인벤토리를 제공합니다. AppLovin, Pangle, InMobi, Digital Turbine 등과도 공식 파트너십을 보유하고 있습니다.",
-    "sameAs": [],
+    "sameAs": ["https://www.youtube.com/@ad-revenue-optimization", "https://www.linkedin.com/company/next-paper-media-communications/"],
     "knowsAbout": ["Google","Ad Manager","AdMob","AdSense","ADX","AppLovin","Pangle","InMobi","Digital Turbine","App","Web","Programmatic","Open Bidding","Mediation","SDK Bidding","Advertising","Monetization","GNI","MCM","GCPP","AI Ray","Brand Safety","Rewarded Ads","Voting Service","In-stream Video"],
     "award":["Google Certified Publishing Partner (2023)","GNI Korea 2023-2025 Monetization Speaker","2025 Google Korea Media Partners Day Speaker","2025 APAC Android TV Summit Speaker"]
   }
@@ -168,6 +36,7 @@
 
 <body>
 
+  <div class="site-header-wrapper">
   <!-- NAV -->
   <header class="site-header">
     <div class="header-container">
@@ -197,6 +66,7 @@
         <a href="#contact" data-scroll-to="contact" class="mobile-nav-link">문의하기</a>
     </nav>
   </header>
+</div>
 
   <!-- HERO SECTION -->
   <section id="hero" class="hero-section">
@@ -242,7 +112,6 @@
 
     <div class="partner-carousel-section">
       <h3>애드네트워크 디맨드 파트너십</h3>
-      <!-- Swiper -->
       <div class="swiper logo-swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -361,7 +230,7 @@
               <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.kakaopay.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="카카오페이"></a>
               <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://web.paybooc.co.kr/" data-aos-url="https://play.google.com/store/apps/details?id=kvp.jjy.MispAndroid320&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%ED%8E%98%EC%9D%B4%EB%B6%81-isp/id369125087"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="비씨카드 페이북"></a>
               <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.hanacard.co.kr/" data-aos-url="https://play.google.com/store/apps/details?id=com.hanaskcard.paycla&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%ED%95%98%EB%82%98pay-%ED%95%98%EB%82%98%EC%B9%B4%EB%93%9C/id847268987"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="하나카드"></a>
-              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.okcashbag.com/displayadmin.do" data-aos-url="https://play.google.com/store/apps/details?id=com.skplanet.ocb.locker&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%98%A4%EB%9D%BD-%EB%A7%8C%EB%B3%B4%EA%B8%B0-%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD-%EC%95%B1%ED%85%8C%ED%81%AC/id6480400926"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="오락"></a>
+              <a href="https://www.okcashbag.com/displayadmin.do" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.okcashbag.com/displayadmin.do" data-aos-url="https://play.google.com/store/apps/details?id=com.skplanet.ocb.locker&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%98%A4%EB%9D%BD-%EB%A7%8C%EB%B3%B4%EA%B8%B0-%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD-%EC%95%B1%ED%85%8C%ED%81%AC/id6480400926"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="오락"></a>
             </div>
           </div>
         </div>
@@ -377,7 +246,7 @@
           <div class="service-pane-partners">
             <h4>제휴 파트너</h4>
             <div class="partner-logo-grid">
-              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.okcashbag.com/displayadmin.do" data-aos-url="https://play.google.com/store/apps/details?id=com.skmc.okcashbag.home_google&hl=ko" data-ios-url="https://apps.apple.com/kr/app/ok-cashbag/id358731598"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="오케이캐시백"></a>
+              <a href="https://www.okcashbag.com/displayadmin.do" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.okcashbag.com/displayadmin.do" data-aos-url="https://play.google.com/store/apps/details?id=com.skmc.okcashbag.home_google&hl=ko" data-ios-url="https://apps.apple.com/kr/app/ok-cashbag/id358731598"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="오케이캐시백"></a>
             </div>
           </div>
         </div>
@@ -395,7 +264,7 @@
             <div class="partner-logo-grid">
               <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://service.kakaomobility.com/cs/faqs/content/?category=121" data-aos-url="https://play.google.com/store/apps/details?id=com.astroframe.seoulbus&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%EB%B2%84%EC%8A%A4-%EB%B2%84%EC%8A%A4-%EC%A7%80%ED%95%98%EC%B2%A0-%EB%8C%80%EC%A4%91%EA%B5%90%ED%86%B5-%EC%8B%A4%EC%8B%9C%EA%B0%84-%EC%A0%95%EB%B3%B4/id1095206186"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="카카오버스"></a>
               <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.kakaopay.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.kakaopay.app&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%8E%98%EC%9D%B4/id1464496236"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="카카오페이"></a>
-              <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.lpoint.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.lottemembers.android&hl=ko" data-ios-url="https://apps.apple.com/kr/app/l-point-with-l-pay/id473250588"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="엘포인트"></a>
+              <a href="https://www.lpoint.com/" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.lpoint.com/" data-aos-url="https://play.google.com/store/apps/details?id=com.lottemembers.android&hl=ko" data-ios-url="https://apps.apple.com/kr/app/l-point-with-l-pay/id473250588"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="엘포인트"></a>
               <a href="#" class="service-partner-link" target="_blank" rel="noopener noreferrer nofollow" data-pc-url="https://www.hanamembership.com/" data-aos-url="https://play.google.com/store/apps/details?id=kr.co.hanamembers.hmscustomer&hl=ko" data-ios-url="https://apps.apple.com/kr/app/%ED%95%98%EB%82%98%EB%A8%B8%EB%8B%88-%ED%8A%B8%EB%9E%98%EB%B8%94%EB%A1%9C%EA%B7%B8/id1038288833"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="하나머니"></a>
             </div>
           </div>
@@ -453,51 +322,158 @@
         </div>
       </div>
     </div>
+    <div class="video-ads-partners">
+      <h4>제휴 파트너</h4>
+      <div class="partner-logo-grid">
+        <a href="https://news.nate.com/view/20250414n18448" target="_blank" rel="noopener noreferrer nofollow">
+          <img src="assets/images/logos/publisher-partners/publisher-nate-logo.webp" alt="네이트">
+        </a>
+        <a href="https://etoland.co.kr/bbs/board.php?bo_table=etohumor07&wr_id=2103279" target="_blank" rel="noopener noreferrer nofollow">
+          <img src="assets/images/logos/publisher-partners/publisher-etoland-logo.webp" alt="이토랜드">
+        </a>
+        <a href="https://ichannela.com/news/detail/000000494783.do" target="_blank" rel="noopener noreferrer nofollow">
+          <img src="assets/images/logos/publisher-partners/publisher-channela-logo.webp" alt="채널A">
+        </a>
+        <a href="https://www.maniareport.com/view.php?ud=2025082101053441756cf2d78c68_19" target="_blank" rel="noopener noreferrer nofollow">
+          <img src="assets/images/logos/publisher-partners/publisher-maniatimes-logo.webp" alt="마니아타임즈">
+        </a>
+        <a href="https://www.thebigdata.co.kr/view.php?ud=201903221100182188d0a8833aad_23" target="_blank" rel="noopener noreferrer nofollow">
+          <img src="assets/images/logos/publisher-partners/publisher-bigdatanews-logo.webp" alt="빅데이터뉴스">
+        </a>
+        <a href="https://www.srtimes.kr/news/articleView.html?idxno=186976" target="_blank" rel="noopener noreferrer nofollow">
+          <img src="assets/images/logos/publisher-partners/publisher-srtimes-logo.webp" alt="SR타임스">
+        </a>
+      </div>
+    </div>
   </section>
 
   <!-- 기타 게시자 파트너 -->
   <section id="publisher-partners" class="section">
     <h2>수많은 파트너가 함께합니다</h2>
-    <p class="section-subtitle">언론사, 커뮤니티, 앱 서비스 등 다양한 분야의 파트너들이 넥스트페이퍼의 기술력과 전문성을 신뢰하고 있습니다.</p>
-    <div class="swiper logo-wall-swiper">
+    <p class="section-subtitle">프리미엄 앱/웹 서비스 및 커뮤니티, 언론사 등 다양한 분야의 파트너들이 넥스트페이퍼의 기술력과 전문성을 신뢰하고 있습니다.</p>
+    
+    <div class="swiper logo-wall-swiper logo-wall-1">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/google-logo.webp" alt="Google"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pangle-logo.webp" alt="Pangle"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/applovin-logo.webp" alt="AppLovin"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/inmobi-logo.webp" alt="InMobi"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="Kakaopay"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/digital-turbine-logo.webp" alt="Digital Turbine"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="Paybooc"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/the-trade-desk-logo.webp" alt="The Trade Desk"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="OK Cashbag"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/rtb-house-logo.webp" alt="RTB House"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="L.Point"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pubmatic-logo.webp" alt="Pubmatic"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="Hanacard"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/fluct-logo.webp" alt="Fluct"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="Hanamoney"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/openx-logo.webp" alt="OpenX"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="Kakaobus"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="Olock"></div>
-        <!-- Duplicate for seamless loop -->
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/google-logo.webp" alt="Google"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pangle-logo.webp" alt="Pangle"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/applovin-logo.webp" alt="AppLovin"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/inmobi-logo.webp" alt="InMobi"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaopay.webp" alt="Kakaopay"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/digital-turbine-logo.webp" alt="Digital Turbine"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-paybooc.webp" alt="Paybooc"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/the-trade-desk-logo.webp" alt="The Trade Desk"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-okcashbag.webp" alt="OK Cashbag"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/rtb-house-logo.webp" alt="RTB House"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-lpoint.webp" alt="L.Point"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/pubmatic-logo.webp" alt="Pubmatic"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanacard.webp" alt="Hanacard"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/fluct-logo.webp" alt="Fluct"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-hanamoney.webp" alt="Hanamoney"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/demand-partners/openx-logo.webp" alt="OpenX"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-kakaobus.webp" alt="Kakaobus"></div>
-        <div class="swiper-slide"><img src="assets/images/logos/service-partners/partner-olock.webp" alt="Olock"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-kakaomobility-logo.webp" alt="카카오모빌리티"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-kakaopay-logo.webp" alt="카카오페이"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-bccard-logo.webp" alt="비씨카드"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hanacard-logo.webp" alt="하나카드"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-lpoint-logo.webp" alt="엘포인트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-skplanet-logo.webp" alt="SK플래닛"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-nate-logo.webp" alt="네이트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-zum-logo.webp" alt="줌인터넷"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-zeta-logo.webp" alt="제타"></div>
+        <!-- duplication -->
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-kakaomobility-logo.webp" alt="카카오모빌리티"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-kakaopay-logo.webp" alt="카카오페이"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-bccard-logo.webp" alt="비씨카드"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hanacard-logo.webp" alt="하나카드"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-lpoint-logo.webp" alt="엘포인트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-skplanet-logo.webp" alt="SK플래닛"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-nate-logo.webp" alt="네이트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-zum-logo.webp" alt="줌인터넷"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-zeta-logo.webp" alt="제타"></div>
+      </div>
+    </div>
+    <div class="swiper logo-wall-swiper logo-wall-2">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-etoland-logo.webp" alt="이토랜드"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-korea-logo.webp" alt="코리아닷컴"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-pandoratv-logo.webp" alt="판도라TV"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-smartbill-logo.webp" alt="스마트빌"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-humoruniv-logo.webp" alt="웃긴대학"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-funnstar-logo.webp" alt="펀앤스타"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-businesspost-logo.webp" alt="비즈니스포스트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-topstarnews-logo.webp" alt="톱스타뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-starnewskorea-logo.webp" alt="스타뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-xportsnews-logo.webp" alt="엑스포츠뉴스"></div>
+        <!-- duplication -->
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-etoland-logo.webp" alt="이토랜드"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-korea-logo.webp" alt="코리아닷컴"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-pandoratv-logo.webp" alt="판도라TV"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-smartbill-logo.webp" alt="스마트빌"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-humoruniv-logo.webp" alt="웃긴대학"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-funnstar-logo.webp" alt="펀앤스타"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-businesspost-logo.webp" alt="비즈니스포스트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-topstarnews-logo.webp" alt="톱스타뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-starnewskorea-logo.webp" alt="스타뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-xportsnews-logo.webp" alt="엑스포츠뉴스"></div>
+      </div>
+    </div>
+    <div class="swiper logo-wall-swiper logo-wall-3">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-chosun-logo.webp" alt="조선일보"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-weeklychosun-logo.webp" alt="주간조선"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-joongang-logo.webp" alt="중앙일보"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-yna-logo.webp" alt="연합뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hani-logo.webp" alt="한겨레"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-khan-logo.webp" alt="경향신문"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hankyung-logo.webp" alt="한국경제"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-munhwa-logo.webp" alt="문화일보"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-wikitree-logo.webp" alt="위키트리"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-ytn-logo.webp" alt="YTN"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-jtbc-logo.webp" alt="JTBC"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-tf-logo.webp" alt="더 팩트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-dt-logo.webp" alt="디지털타임스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-edaily-logo.webp" alt="이데일리"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-news1-logo.webp" alt="뉴스1"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-newsis-logo.webp" alt="뉴시스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-osen-logo.webp" alt="OSEN"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-seoul-logo.webp" alt="서울신문"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-asiatoday-logo.webp" alt="아시아투데이"></div>
+        <!-- duplication -->
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-chosun-logo.webp" alt="조선일보"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-weeklychosun-logo.webp" alt="주간조선"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-joongang-logo.webp" alt="중앙일보"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-yna-logo.webp" alt="연합뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hani-logo.webp" alt="한겨레"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-khan-logo.webp" alt="경향신문"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hankyung-logo.webp" alt="한국경제"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-munhwa-logo.webp" alt="문화일보"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-wikitree-logo.webp" alt="위키트리"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-ytn-logo.webp" alt="YTN"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-jtbc-logo.webp" alt="JTBC"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-tf-logo.webp" alt="더 팩트"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-dt-logo.webp" alt="디지털타임스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-edaily-logo.webp" alt="이데일리"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-news1-logo.webp" alt="뉴스1"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-newsis-logo.webp" alt="뉴시스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-osen-logo.webp" alt="OSEN"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-seoul-logo.webp" alt="서울신문"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-asiatoday-logo.webp" alt="아시아투데이"></div>
+      </div>
+    </div>
+    <div class="swiper logo-wall-swiper logo-wall-4">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-kormedi-logo.webp" alt="코메디닷컴"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hidoc-logo.webp" alt="하이닥"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-ajunews-logo.webp" alt="아주경제"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-asiae-logo.webp" alt="아시아경제"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-fnnews-logo.webp" alt="파이낸셜뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-foodnews-logo.webp" alt="식품저널"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-mediapen-logo.webp" alt="미디어펜"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-moneys-logo.webp" alt="머니S"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-mt-logo.webp" alt="머니투데이"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-sanchosun-logo.webp" alt="월간산"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-sportshankooki-logo.webp" alt="스포츠한국"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-sportsseoul-logo.webp" alt="스포츠서울"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-traveltimes-logo.webp" alt="여행신문"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-zdnet-logo.webp" alt="지디넷코리아"></div>
+        <!-- duplication -->
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-kormedi-logo.webp" alt="코메디닷컴"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-hidoc-logo.webp" alt="하이닥"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-ajunews-logo.webp" alt="아주경제"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-asiae-logo.webp" alt="아시아경제"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-fnnews-logo.webp" alt="파이낸셜뉴스"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-foodnews-logo.webp" alt="식품저널"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-mediapen-logo.webp" alt="미디어펜"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-moneys-logo.webp" alt="머니S"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-mt-logo.webp" alt="머니투데이"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-sanchosun-logo.webp" alt="월간산"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-sportshankooki-logo.webp" alt="스포츠한국"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-sportsseoul-logo.webp" alt="스포츠서울"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-traveltimes-logo.webp" alt="여행신문"></div>
+        <div class="swiper-slide"><img src="assets/images/logos/publisher-partners/publisher-zdnet-logo.webp" alt="지디넷코리아"></div>
       </div>
     </div>
   </section>
@@ -535,59 +511,26 @@
     </div>
   </section>
 
+  <!-- Partner Info Modal -->
+  <div id="partnerInfoModal" class="modal-overlay">
+    <div class="modal-content">
+      <button id="modalCloseBtn" class="modal-close-btn">&times;</button>
+      <h3 id="modalTitle"></h3>
+      <p id="modalDescription"></p>
+      <a href="#" id="modalLink" class="cta-button" target="_blank" rel="noopener noreferrer">웹사이트 방문하기</a>
+    </div>
+  </div>
+
   <!-- 플로팅 버튼 -->
   <div id="floating-contact-btn" data-scroll-to="contact" class="floating-btn">
     문의하기
   </div>
 
-  <!-- 로컬 minify JS -->
+  <!-- 로컬 JS -->
   <script src="assets/js/swiper-bundle.min.js"></script>
-  <script src="assets/js/script.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const handleDeviceSpecificRedirect = (event) => {
-        const link = event.currentTarget;
-        if (!link.dataset.pcUrl && !link.dataset.aosUrl && !link.dataset.iosUrl) {
-            return;
-        }
-
-        event.preventDefault();
-
-        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-        let targetUrl = link.dataset.pcUrl || '#';
-
-        if (/android/i.test(userAgent)) {
-          targetUrl = link.dataset.aosUrl || link.dataset.pcUrl || '#';
-        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          targetUrl = link.dataset.iosUrl || link.dataset.pcUrl || '#';
-        }
-
-        if (targetUrl && targetUrl !== '#') {
-          window.open(targetUrl, '_blank', 'noopener,noreferrer');
-        } else {
-          console.warn('No specific URL for this device or a placeholder URL was used.');
-        }
-      };
-
-      const partnerLinks = document.querySelectorAll('.service-partner-link, .partner-logo-link');
-      partnerLinks.forEach(link => {
-        link.addEventListener('click', handleDeviceSpecificRedirect);
-      });
-
-      // Initialize Logo Wall Swiper
-      new Swiper('.logo-wall-swiper', {
-        loop: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-        spaceBetween: 60,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-        speed: 8000,
-      });
-    });
-  </script>
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
+ipt.js" defer></script>
 </body>
 </html>
