@@ -74,29 +74,74 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // ===================================================================
-      // 5. Company History Timeline Tooltip
+      // 5. Company History Timeline Tooltip (FINAL VERSION 2)
       // ===================================================================
       const timelineGraph = document.querySelector('.timeline-graph');
       const tooltip = document.getElementById('tooltip');
+      let activeHitbox = null; // The currently "pinned" hitbox
+
       if (timelineGraph && tooltip) {
-        timelineGraph.querySelectorAll('circle.point').forEach(point => {
-          point.addEventListener('mouseover', (e) => {
-            const year = e.target.getAttribute('data-year');
-            const text = e.target.getAttribute('data-text');
-            tooltip.innerHTML = `<strong>${year}</strong><p>${text}</p>`;
-            tooltip.style.display = 'block';
+          const showTooltip = (hitbox) => {
+              const point = hitbox.nextElementSibling; // Get the associated visible point
+              if (!point) return;
+
+              // Update content from the visible point's data attributes
+              const year = point.getAttribute('data-year');
+              const text = point.getAttribute('data-text');
+              tooltip.innerHTML = `<strong>${year}</strong><p>${text}</p>`;
+              
+              tooltip.style.display = 'block';
+              const tooltipRect = tooltip.getBoundingClientRect();
+              const graphRect = timelineGraph.getBoundingClientRect();
+              const pointRect = point.getBoundingClientRect();
+
+              const x = (pointRect.left + pointRect.right) / 2 - graphRect.left;
+              
+              // Horizontal boundary check
+              let left = x - (tooltipRect.width / 2);
+              if (left < 0) left = 5;
+              if (left + tooltipRect.width > graphRect.width) {
+                  left = graphRect.width - tooltipRect.width - 5;
+              }
+
+              tooltip.style.left = `${left}px`;
+              
+              // Un-highlight the previously active point, if any
+              if (activeHitbox && activeHitbox !== hitbox) {
+                  activeHitbox.nextElementSibling.style.fill = '#fff';
+              }
+              
+              // Highlight the new active point
+              point.style.fill = '#2563eb';
+              activeHitbox = hitbox;
+          };
+
+          const hideTooltip = () => {
+              if (activeHitbox) {
+                  tooltip.style.display = 'none';
+                  activeHitbox.nextElementSibling.style.fill = '#fff'; // Un-highlight
+                  activeHitbox = null;
+              }
+          };
+
+          // Click Logic
+          timelineGraph.querySelectorAll('.point-hitbox').forEach(hitbox => {
+              hitbox.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  if (hitbox === activeHitbox) {
+                      hideTooltip();
+                  } else {
+                      showTooltip(hitbox);
+                  }
+              });
           });
-          point.addEventListener('mousemove', (e) => {
-              const rect = timelineGraph.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              tooltip.style.left = `${x + 15}px`;
-              tooltip.style.top = `${y + 15}px`;
+
+          // Hide tooltip when clicking anywhere else on the document
+          document.addEventListener('click', (e) => {
+              if (activeHitbox && !activeHitbox.contains(e.target) && !tooltip.contains(e.target)) {
+                  hideTooltip();
+              }
           });
-          point.addEventListener('mouseout', () => {
-            tooltip.style.display = 'none';
-          });
-        });
       }
 
       // ===================================================================
