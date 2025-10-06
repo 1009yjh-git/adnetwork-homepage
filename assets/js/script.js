@@ -213,22 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // ===================================================================
       // 7. Swiper Initializations
       // ===================================================================
-      // Config for forward rows
-      const forwardConfig = {
-        loop: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-        spaceBetween: 15,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-        speed: 4000,
-      };
-
-      new Swiper('.logo-swiper', forwardConfig);
-
       const partnerSwipers = document.querySelectorAll('.logo-wall-swiper .swiper-wrapper');
       partnerSwipers.forEach(swiper => {
           swiper.addEventListener('mouseenter', () => {
@@ -239,9 +223,27 @@ document.addEventListener('DOMContentLoaded', () => {
           });
       });
 
+      // Swiper is initialized on window.load to prevent render blocking
+      window.addEventListener('load', () => {
+        // Config for forward rows
+        const forwardConfig = {
+          loop: true,
+          freeMode: true,
+          slidesPerView: 'auto',
+          spaceBetween: 15,
+          autoplay: {
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
+          speed: 4000,
+        };
+        new Swiper('.logo-swiper', forwardConfig);
+      });
+
       // ===================================================================
       // 8. Floating Button Visibility
-      // ===================================================================
+      // ===================================================================================
       const contactSection = document.getElementById('contact');
       const floatingBtn = document.getElementById('floating-contact-btn');
 

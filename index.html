@@ -7,10 +7,14 @@
   <meta name="description" content="넥스트페이퍼는 Google Ad Manager·AdMob 공식 MCM/GCPP로 AppLovin, Pangle, InMobi, Digital Turbine 등과도 공식 파트너십을 보유하고 있으며, AI Ray(광고·콘텐츠 대상 인공지능 자동검수 솔루션)와 프리미엄 영상 인벤토리를 제공합니다." />
   <meta name="theme-color" content="#0b1324" />
 
+  <!-- Preload LCP Image -->
+  <link rel="preload" fetchpriority="high" as="image" href="assets/images/backgrounds/hero-section-image.webp" type="image/webp">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"></noscript>
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -21,7 +25,8 @@
   <link rel="canonical" href="https://1009yjh-git.github.io/adnetwork-homepage/">
 
   <!-- Main CSS (Async) -->
-  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="assets/css/swiper-bundle.min.css"></noscript>
   <link rel="stylesheet" href="assets/css/styles.min.css?v=2.2" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="assets/css/styles.min.css?v=2.2"></noscript>
 
@@ -239,7 +244,7 @@
     </div>
     <div class="video-section-layout">
       <div class="video-player-wrapper">
-        <iframe id="gni-video-player" src="https://www.youtube.com/embed/I1NMafBDmiQ" loading="lazy" title="1. 광고 수익화 준비 – 01. 트래픽 증대 고려사항" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe id="gni-video-player" src="https://www.youtube-nocookie.com/embed/I1NMafBDmiQ" loading="lazy" title="1. 광고 수익화 준비 – 01. 트래픽 증대 고려사항" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div class="video-playlist-wrapper">
         <div class="playlist-header">GNI 코리아 발표영상 주요내용</div>
